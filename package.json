@@ -1,0 +1,22 @@
+{
+  "name": "raddish",
+  "description": "The first completely streaming MVC framework.",
+  "version": "0.0.2",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "main": "./index.coffee",
+  "devDependencies": {
+    "mysql": "*",
+    "nodemon": "*",
+    "async": "*",
+    "squel": "*",
+    "formidable": "*",
+    "es6-shim": "*"
+  },
+  "keywords": [
+    "RAD",
+    "framework",
+    "streams"
+  ]
+}
