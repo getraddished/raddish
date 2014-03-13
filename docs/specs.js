@@ -12,6 +12,7 @@
  *      This means that it can handle HTTP verbs (e.g.: GET, POST, PUT, DELETE)
  *      And will start the appropriate controller/ model.
  *      The current level is: RESTful Level 2
+ *      Level 3 is planned, But this has to be thought out.
  *
  * - MVC:
  *      This framework for development purposes will incorperate the MVC triat.
@@ -19,7 +20,8 @@
  *      Unlike the first version this version will not hold a row/ rowset object. Because we stream it means that everything will be a row.
  *
  * - Chain of Command:
- *      TODO: Make note of this.
+ *      This will imply that the framework will be able to handle behaviors.
+ *      Behaviors can be called on data to do "extra" functions.
  *
  * - Error Handeling:
  *      Return the thrown error, with correct statuscode.
