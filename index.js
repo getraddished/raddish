@@ -2,6 +2,8 @@
  * When using this framework please extend from the following objects.
  * When done wrong the framework might break, and/ or function unpredicted.
  */
+require('es6-shim');
+
 module.exports.Router = require('./lib/router/router');
 module.exports.Dispatcher = require('./lib/dispatcher/dispatcher');
 module.exports.Controller = require('./lib/controller/controller');
