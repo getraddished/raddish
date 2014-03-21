@@ -12,7 +12,7 @@
     "async": "*",
     "squel": "*",
     "formidable": "*",
-    "es6-shim": "*"
+    "q": "*"
   },
   "keywords": [
     "RAD",
