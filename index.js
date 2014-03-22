@@ -2,7 +2,7 @@
  * When using this framework please extend from the following objects.
  * When done wrong the framework might break, and/ or function unpredicted.
  */
-Q = require('q');
+Q = require('bluebird');
 
 module.exports.Router = require('./lib/router/router');
 module.exports.Dispatcher = require('./lib/dispatcher/dispatcher');
