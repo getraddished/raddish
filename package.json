@@ -12,7 +12,8 @@
     "async": "*",
     "squel": "*",
     "formidable": "*",
-    "q": "*"
+    "q": "*",
+    "mime": "*"
   },
   "keywords": [
     "RAD",
