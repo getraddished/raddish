@@ -1,10 +1,7 @@
 {
   "name": "raddish",
   "description": "Another MVC framework.",
-  "version": "0.0.1",
-  "scripts": {
-    "start": "nodemon app.js"
-  },
+  "version": "0.0.2",
   "main": "./index.js",
   "repository": {
       "type": "git",
@@ -22,7 +19,7 @@
   "keywords": [
     "RAD",
     "framework",
-    "streams",
+    "promises",
     "MVC",
     "DCI"
   ]
