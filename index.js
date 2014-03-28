@@ -1,6 +1,9 @@
 /**
- * When using this framework please extend from the following objects.
- * When done wrong the framework might break, and/ or function unpredicted.
+ * Provides base classes from which can be extended
+ *
+ * @module raddish
+ * @author Jasper van Rijbroek <jasper@jvar.nl>
+ * @since 28 March 2014
  */
 Promise = require('bluebird');
 
