@@ -1,23 +1,29 @@
 {
   "name": "raddish",
-  "description": "The first completely streaming MVC framework.",
-  "version": "0.0.2",
+  "description": "Another MVC framework.",
+  "version": "0.0.1",
   "scripts": {
     "start": "nodemon app.js"
   },
-  "main": "./index.coffee",
+  "main": "./index.js",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/JaspervRijbroek/raddish.git"
+  },
   "devDependencies": {
     "mysql": "*",
     "nodemon": "*",
     "async": "*",
     "squel": "*",
     "formidable": "*",
-    "q": "*",
+    "bluebird": "*",
     "mime": "*"
   },
   "keywords": [
     "RAD",
     "framework",
-    "streams"
+    "streams",
+    "MVC",
+    "DCI"
   ]
 }
