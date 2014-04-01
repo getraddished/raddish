@@ -16,5 +16,6 @@ module.exports.ModelAbstract    = require('./lib/model/abstract');
 module.exports.Table            = require('./lib/database/table/table');
 module.exports.Row              = require('./lib/database/row/row');
 module.exports.Rowset           = require('./lib/database/rowset/rowset');
+module.exports.Permission       = require('./lib/controller/permission/permission');
 
 module.exports.Inflector        = require('./lib/inflector/inflector');
