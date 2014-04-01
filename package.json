@@ -9,13 +9,19 @@
   },
   "devDependencies": {
     "mysql": "*",
-    "nodemon": "*",
     "async": "*",
     "squel": "*",
     "formidable": "*",
     "bluebird": "*",
-    "mime": "*",
-    "should": "*"
+    "mime": "*"
+  },
+  "dependencies": {
+    "mysql": "*",
+    "async": "*",
+    "squel": "*",
+    "formidable": "*",
+    "bluebird": "*",
+    "mime": "*"
   },
   "keywords": [
     "RAD",
