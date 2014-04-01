@@ -14,7 +14,8 @@
     "squel": "*",
     "formidable": "*",
     "bluebird": "*",
-    "mime": "*"
+    "mime": "*",
+    "should": "*"
   },
   "keywords": [
     "RAD",
