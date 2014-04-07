@@ -5,7 +5,8 @@
  * @author Jasper van Rijbroek <jasper@jvar.nl>
  * @since 28 March 2014
  */
-Promise = require('bluebird');
+Promise                         = require('bluebird');
+Exception                       = require('./lib/exception/exception');
 
 module.exports.Router           = require('./lib/router/router');
 module.exports.Dispatcher       = require('./lib/dispatcher/dispatcher');
@@ -20,5 +21,6 @@ module.exports.RowAbstract      = require('./lib/database/row/abstract');
 module.exports.Rowset           = require('./lib/database/rowset/rowset');
 module.exports.RowsetAbstract   = require('./lib/database/rowset/abstract');
 module.exports.Permission       = require('./lib/controller/permission/permission');
+module.exports.Exception        = Exception;
 
 module.exports.Inflector        = require('./lib/inflector/inflector');
