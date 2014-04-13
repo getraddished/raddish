@@ -1,19 +1,11 @@
 {
   "name": "raddish",
   "description": "Another MVC framework.",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "main": "./index.js",
   "repository": {
       "type": "git",
       "url": "https://github.com/JaspervRijbroek/raddish.git"
-  },
-  "devDependencies": {
-    "mysql": "*",
-    "async": "*",
-    "squel": "*",
-    "formidable": "*",
-    "bluebird": "*",
-    "mime": "*"
   },
   "dependencies": {
     "mysql": "*",
@@ -28,6 +20,7 @@
     "framework",
     "promises",
     "MVC",
-    "DCI"
+    "DCI",
+    "fallback"
   ]
 }
