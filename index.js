@@ -8,6 +8,8 @@
 Promise                         = require('bluebird');
 RaddishError                    = require('./lib/error/raddish');
 
+module.exports                  = require('./lib/raddish/raddish');
+module.exports.Application      = require('./lib/application/application');
 module.exports.Base             = require('./lib/base/base');
 module.exports.Router           = require('./lib/router/router');
 module.exports.Dispatcher       = require('./lib/dispatcher/dispatcher');
