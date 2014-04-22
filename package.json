@@ -13,7 +13,8 @@
     "squel": "*",
     "formidable": "*",
     "bluebird": "*",
-    "mime": "*"
+    "mime": "*",
+    "usage": "*"
   },
   "keywords": [
     "RAD",
