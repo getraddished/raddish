@@ -11,10 +11,10 @@ request.url = '/home/menu/items';
 describe('Router tests', function() {
     describe('#parseRequest()', function() {
         it('should return a parsed request', function(done) {
-            var req = router.parseRequest(request);
+            var req = router.parseRequest(request)[0];
 
-            req.url.should.be.an.instanceOf(Object);
-            req.url.query.should.be.an.instanceOf(Object);
+            should(req.url).be.an.instanceOf(Object);
+            should(req.url.query).should.be.an.instanceOf(Object);
             done();
         });
     });

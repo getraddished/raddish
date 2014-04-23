@@ -13,7 +13,7 @@ request = router.parseRequest(request);
 describe('Service loader tests.', function() {
     describe('#getObject().', function() {
         it('The identifier home:menu.model.items should return a Model object', function(done) {
-            Service.get('home:menu.model.items', null)
+            Service.get('core:model.model', null)
                 .then(function(model) {
                     model.should.be.an.instanceOf(raddish.Model);
 
@@ -22,7 +22,7 @@ describe('Service loader tests.', function() {
         });
 
         it('The identifier home:menu.controller.items should return a Controller object', function(done) {
-            Service.get('home:menu.controller.items', {
+            Service.get('core:controller.controller', {
                     request: request
                 })
                 .then(function(controller) {
