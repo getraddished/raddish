@@ -1,19 +1,9 @@
-var should      = require('should');
-var http        = require('http');
-var request     = new http.IncomingMessage();
-var Raddish     = require('../index.js');
+require('./base');
 var Service     = Raddish.Service;
 var router      = new Raddish.Router();
 
-Raddish.setConfig('./config.json');
-Raddish.setApplication('home', '../../test/apps/home/app.js');
-
-// Set faux url for testing.
-request.url = '/home/menu/items';
-request = router.parseRequest(request)[0];
-
 describe('Service loader tests.', function() {
-    describe('#getObject().', function() {
+    describe('#get', function() {
         it('The identifier home:menu.model.items should return a Model object', function(done) {
             Service.get('home:menu.model.items', null)
                 .then(function(model) {
