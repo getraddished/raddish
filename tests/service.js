@@ -4,29 +4,40 @@ var request     = new http.IncomingMessage();
 var Raddish     = require('../index.js');
 var Service     = Raddish.Service;
 var router      = new Raddish.Router();
-Raddish.setConfig(require('./config.js'));
+
+Raddish.setConfig('./config.json');
+Raddish.setApplication('home', '../../test/apps/home/app.js');
 
 // Set faux url for testing.
 request.url = '/home/menu/items';
-request = router.parseRequest(request);
+request = router.parseRequest(request)[0];
 
 describe('Service loader tests.', function() {
     describe('#getObject().', function() {
         it('The identifier home:menu.model.items should return a Model object', function(done) {
-            Service.get('core:model.model', null)
+            Service.get('home:menu.model.items', null)
                 .then(function(model) {
-                    model.should.be.an.instanceOf(raddish.Model);
+                    model.should.be.an.instanceOf(Raddish.Model);
 
                     done();
                 });
         });
 
         it('The identifier home:menu.controller.items should return a Controller object', function(done) {
-            Service.get('core:controller.controller', {
+            Service.get('home:menu.controller.items', {
                     request: request
                 })
                 .then(function(controller) {
-                    controller.should.be.an.instanceOf(raddish.Controller);
+                    controller.should.be.an.instanceOf(Raddish.Controller);
+
+                    done();
+                });
+        });
+
+        it('Should return a Table object', function(done) {
+            Service.get('home:menu.database.table.items')
+                .then(function(table) {
+                    table.should.be.an.instanceOf(Raddish.Table);
 
                     done();
                 });
