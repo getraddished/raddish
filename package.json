@@ -11,13 +11,14 @@
       "should": "*"
   },
   "dependencies": {
-    "mysql":        "*",
-    "async":        "*",
-    "squel":        "*",
-    "formidable":   "*",
-    "bluebird":     "*",
-    "mime":         "*",
-    "usage":        "*"
+    "mysql":            "*",
+    "async":            "*",
+    "squel":            "*",
+    "formidable":       "*",
+    "bluebird":         "*",
+    "mime":             "*",
+    "usage":            "*",
+    "update-notifier":  "*"
   },
   "keywords": [
     "RAD",
