@@ -1,14 +1,43 @@
-var Service     = Raddish.Service;
+require('./base');
 
 describe('Table tests', function() {
-    describe('new Table()', function() {
-        it('name = foo_bar should return an error table not found.', function(done) {
-            Service.get('core:database.table.table', {
-                    name: 'menu_items'
-                })
+    describe('Constructor values', function() {
+        it('Test various values', function(done) {
+            Service.get('home:menu.database.table.items')
                 .then(function(table) {
                     table.should.have.property('name', 'menu_items')
-                    table.getIdentifier().toString().should.equal('core:database.table.table');
+                    table.getIdentifier().toString().should.equal('home:menu.database.table.items');
+
+                    table.getRow().should.be.an.instanceOf(Promise);
+                    table.getRowset().should.be.an.instanceOf(Promise);
+
+                    done();
+                });
+        });
+    });
+
+    describe('#getRow()', function() {
+        it('Should return a Row object', function(done) {
+            Service.get('home:menu.database.table.items')
+                .then(function(table) {
+                    return table.getRow();
+                })
+                .then(function(row) {
+                    row.should.be.an.instanceOf(Raddish.Row);
+
+                    done();
+                });
+        });
+    });
+
+    describe('#getRowset()', function() {
+        it('Should return a Rowset object', function(done) {
+            Service.get('home:menu.database.table.items')
+                .then(function(table) {
+                    return table.getRowset();
+                })
+                .then(function(rowset) {
+                    rowset.should.be.an.instanceOf(Raddish.Rowset);
 
                     done();
                 });

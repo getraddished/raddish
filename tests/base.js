@@ -12,8 +12,10 @@ Raddish.setApplication('home', '../../test/apps/home/app.js');
 // Local variables.
 var http        = require('http');
 var Request     = new http.IncomingMessage();
+var Response    = new http.ServerResponse();
 
 // Global variables to make the tests less populated.
 should = require('should');
 Request.url = '/home/menu/items';
 request = new Raddish.Router().parseRequest(Request)[0];
+response = Response;
