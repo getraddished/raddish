@@ -12,7 +12,7 @@ Raddish.setApplication('home', '../../test/apps/home/app.js');
 // Local variables.
 var http        = require('http');
 var Request     = new http.IncomingMessage();
-var Response    = new http.ServerResponse();
+var Response    = new http.OutgoingMessage();
 
 // Global variables to make the tests less populated.
 should = require('should');
