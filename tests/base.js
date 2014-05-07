@@ -7,7 +7,7 @@
 require('../index');
 
 Raddish.setConfig('./tests/config.json');
-Raddish.setApplication('home', '../test/apps/home/app.js');
+Raddish.setApplication('home', './tests/testApp/app.js');
 
 // Local variables.
 var http        = require('http');
