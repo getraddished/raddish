@@ -17,6 +17,7 @@ module.exports.Dispatcher       = require('./lib/dispatcher/dispatcher');
 module.exports.Controller       = require('./lib/controller/controller');
 module.exports.ViewJson         = require('./lib/view/json');
 module.exports.ViewAbstract     = require('./lib/view/abstract');
+module.exports.Mixin            = require('./lib/mixin/mixin');
 module.exports.Model            = require('./lib/model/model');
 module.exports.ModelAbstract    = require('./lib/model/abstract');
 module.exports.Table            = require('./lib/database/table/table');
