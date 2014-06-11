@@ -12,7 +12,7 @@
       "mocha": "*"
   },
   "scripts": {
-      "test": "mocha tests/*"
+      "test": "mocha tests/* -R spec"
   },
   "dependencies": {
     "mysql":            "*",

@@ -6,8 +6,8 @@
 // Raddish will register a global variable.
 require('../index');
 
-Raddish.setConfig('./config.json');
-Raddish.setApplication('home', '../../test/apps/home/app.js');
+Raddish.setConfig('./tests/config.json');
+Raddish.setApplication('home', '../test/apps/home/app.js');
 
 // Local variables.
 var http        = require('http');
