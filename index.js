@@ -13,6 +13,7 @@ Socket                                      = require('./lib/socket/socket')
 
 module.exports                              = Raddish;
 module.exports.AbstractContollerBehavior    = require('./lib/controller/behavior/abstract');
+module.exports.AbstractTableBehavior        = require('./lib/database/table/behavior/abstract');
 module.exports.Application                  = require('./lib/application/application');
 module.exports.Router                       = require('./lib/router/router');
 module.exports.Dispatcher                   = require('./lib/dispatcher/dispatcher');
