@@ -22,7 +22,8 @@
     "bluebird":         "*",
     "mime":             "*",
     "usage":            "*",
-    "update-notifier":  "*"
+    "update-notifier":  "*",
+    "socket.io":        "*"
   },
   "keywords": [
     "RAD",
