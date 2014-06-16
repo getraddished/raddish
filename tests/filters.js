@@ -53,5 +53,11 @@ describe('Controller Tests', function() {
             filter.sanitize('blaat199069!#@muhaha%^&.nl*()').should.equal('blaat199069@muhaha.nl');
             filter.sanitize('bla!#@blaat%^&.*(nl*()').should.equal('bla@blaat.nl');
         });
+
+        it('Should return a correct MD5', function() {
+            var filter = getFilter('md5');
+
+            filter.sanitize('88f931198d715c2a647644f70f45fa29123798456439').should.equal('88f931198d715c2a647644f70f45fa29');
+        });
     });
 });
