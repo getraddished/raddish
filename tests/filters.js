@@ -50,7 +50,8 @@ describe('Controller Tests', function() {
         it('Should return a clean email address', function() {
             var filter = getFilter('email');
 
-            filter.sanitize('jasper199069!#@live%^&.nl*()').should.equal('jasper199069@live.nl');
+            filter.sanitize('blaat199069!#@muhaha%^&.nl*()').should.equal('blaat199069@muhaha.nl');
+            filter.sanitize('bla!#@blaat%^&.*(nl*()').should.equal('bla@blaat.nl');
         });
     });
 });
