@@ -23,7 +23,8 @@
     "mime":             "*",
     "usage":            "*",
     "update-notifier":  "*",
-    "socket.io":        "*"
+    "socket.io":        "*",
+    "clone":            "*"
   },
   "keywords": [
     "RAD",
