@@ -17,7 +17,7 @@
   "dependencies": {
     "mysql":            "*",
     "async":            "*",
-    "squel":            "*",
+    "univeral-query":   "*",
     "formidable":       "*",
     "bluebird":         "*",
     "mime":             "*",
