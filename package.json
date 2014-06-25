@@ -23,7 +23,8 @@
     "usage":            "*",
     "update-notifier":  "*",
     "socket.io":        "*",
-    "clone":            "*"
+    "clone":            "*",
+    "mongodb":          "*"
   },
   "keywords": [
     "RAD",
