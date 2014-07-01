@@ -1,8 +1,12 @@
 require('./base');
 var Mixin = require('../lib/mixin/mixin');
 
-var One = new Service();
-var Two = new Service();
+var One = new Service({
+    identifier: 'home:menu.model.items'
+});
+var Two = new Service({
+    identifier: 'home:content.model.articles'
+});
 
 Two.testOne = function() {
     console.log('testOne');

@@ -1,16 +1,13 @@
 require('./base');
 
-var View = Service.get('home:menu.view.json', {
-    request: request,
-    response: response
-});
+var View = Service.get('home:menu.view.json');
 
 describe('View tests', function() {
     describe('constructor values', function() {
         it('test various values', function(done) {
             View.then(function(view) {
                 view.getIdentifier().should.be.an.Object;
-                view.response.getHeader('Content-Type').should.equal('application/json');
+                view.mimetype.should.equal('application/json');
 
                 done();
             });

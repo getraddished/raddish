@@ -1,7 +1,7 @@
 {
   "name": "raddish",
   "description": "Another MVC framework.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "./index.js",
   "repository": {
       "type": "git",
@@ -17,14 +17,14 @@
   "dependencies": {
     "mysql":            "*",
     "async":            "*",
-    "squel":            "*",
     "formidable":       "*",
     "bluebird":         "*",
     "mime":             "*",
     "usage":            "*",
     "update-notifier":  "*",
     "socket.io":        "*",
-    "clone":            "*"
+    "clone":            "*",
+    "mongodb":          "*"
   },
   "keywords": [
     "RAD",

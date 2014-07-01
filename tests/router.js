@@ -2,7 +2,6 @@ var should      = require('should');
 var http        = require('http');
 var request     = new http.IncomingMessage();
 var raddish     = require('../index.js');
-var Service     = new raddish.Service();
 var router      = new raddish.Router();
 
 // Set faux url for testing.
