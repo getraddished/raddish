@@ -1,7 +1,7 @@
 {
   "name": "raddish",
   "description": "Another MVC framework.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "./index.js",
   "repository": {
       "type": "git",
