@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "mysql":            "*",
-    "async":            "*",
     "formidable":       "*",
     "bluebird":         "*",
     "mime":             "*",
