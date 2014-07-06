@@ -29,6 +29,7 @@ module.exports.RowAbstract                  = require('./lib/database/row/abstra
 module.exports.Rowset                       = require('./lib/database/rowset/default');
 module.exports.RowsetAbstract               = require('./lib/database/rowset/abstract');
 module.exports.Permission                   = require('./lib/controller/permission/default');
+module.exports.Plugin                       = require('./lib/plugin/plugin');
 module.exports.RaddishError                 = RaddishError;
 module.exports.Service                      = Service;
 module.exports.Socket                       = Socket;
