@@ -7,7 +7,7 @@
  */
 Promise                                     = require('bluebird');
 RaddishError                                = require('./lib/error/raddish');
-Service                                     = require('./lib/service/service');
+ObjectManager                               = require('./lib/object/manager');
 Raddish                                     = require('./lib/raddish/raddish');
 Socket                                      = require('./lib/socket/socket')
 
@@ -31,7 +31,7 @@ module.exports.RowsetAbstract               = require('./lib/database/rowset/abs
 module.exports.Permission                   = require('./lib/controller/permission/default');
 module.exports.Plugin                       = require('./lib/plugin/plugin');
 module.exports.RaddishError                 = RaddishError;
-module.exports.Service                      = Service;
+module.exports.ObjectManager                = ObjectManager;
 module.exports.Socket                       = Socket;
 
 module.exports.Inflector                    = require('./lib/inflector/inflector');
