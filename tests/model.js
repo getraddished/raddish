@@ -1,5 +1,5 @@
 require('./base');
-var Model = Service.get('home:menu.model.item');
+var Model = ObjectManager.get('com://home/menu.model.item');
 
 describe('Model Tests', function() {
     describe('#getList()', function() {

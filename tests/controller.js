@@ -3,7 +3,7 @@ require('./base');
 describe('Controller Tests', function() {
     describe('#getModel()', function() {
         it('Should return a Model object', function(done) {
-            Raddish.Service.get('home:menu.controller.item')
+            ObjectManager.get('com://home/menu.controller.item')
                 .then(function(controller) {
                     controller.request = request;
 
@@ -19,7 +19,7 @@ describe('Controller Tests', function() {
 
     describe('#getPermissions', function(done) {
         it('Should return an Permissions object', function(done) {
-            Raddish.Service.get('home:menu.controller.item')
+            ObjectManager.get('com://home/menu.controller.item')
                 .then(function(controller) {
                     controller.request = request
 
@@ -33,7 +33,7 @@ describe('Controller Tests', function() {
         });
 
         it('function canBrowse should return true', function(done) {
-            Raddish.Service.get('home:menu.controller.item')
+            ObjectManager.get('com://home/menu.controller.item')
                 .then(function(controller) {
                     controller.request = request;
 
@@ -50,7 +50,7 @@ describe('Controller Tests', function() {
         });
 
         it('function canAdd should return false', function(done) {
-            Raddish.Service.get('home:menu.controller.item')
+            ObjectManager.get('com://home/menu.controller.item')
                 .then(function(controller) {
                     controller.request = request;
 
@@ -67,7 +67,7 @@ describe('Controller Tests', function() {
         });
 
         it('function canDelete should return false', function(done) {
-            Raddish.Service.get('home:menu.controller.item')
+            ObjectManager.get('com://home/menu.controller.item')
                 .then(function(controller) {
                     controller.request = request;
 
@@ -86,7 +86,7 @@ describe('Controller Tests', function() {
 
     describe('#getCommandChain()', function() {
         it('Should return a commandChain object', function(done) {
-            Raddish.Service.get('home:menu.controller.item')
+            ObjectManager.get('com://home/menu.controller.item')
                 .then(function(controller) {
                     controller.request = request;
 
@@ -102,7 +102,7 @@ describe('Controller Tests', function() {
 
     describe('constructor values', function() {
         it('Test various values', function(done) {
-            Service.get('home:menu.controller.item')
+            ObjectManager.get('com://home/menu.controller.item')
                 .then(function(controller) {
                     controller.request = request;
 

@@ -1,15 +1,14 @@
 {
 	"db": {
 		"default": {
-			"host": "localhost",
-			"port": 8889,
-			"user": "root",
-			"password": "root",
-			"database": "new-cp",
+			"host": "37.34.54.223",
+			"user": "demo",
+			"password": "Tester22",
+			"database": "raddish_demo",
             "prefix": false
 		}
 	},
 	"layout": "json",
-	"allow_singular_plural": true,
-    "gzip": true
+    "gzip": true,
+    "port": 1337
 }
