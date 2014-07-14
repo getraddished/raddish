@@ -40,7 +40,8 @@ describe('Model Tests', function() {
         });
 
         it('Should return a Row Object', function(done) {
-            Model.then(function(model) {
+            Model
+                .then(function(model) {
                     model.set('id', 1);
 
                     return model.getItem();
