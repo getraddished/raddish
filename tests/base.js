@@ -16,9 +16,9 @@ var Response    = new http.OutgoingMessage();
 var Post        = new http.IncomingMessage();
 
 // Global variables to make the tests less populated.
-should = require('should');
-Request.url = '/home/menu/items';
-Post.url = '/home/menu/item?id=1';
+should          = require('should');
+Request.url     = '/home/menu/items';
+Post.url        = '/home/menu/item?id=1';
 
-request = new Raddish.Router().parseRequest(Request)[0];
-response = Response;
+request         = new Raddish.Router().parseRequest(Request)[0];
+response        = Response;
