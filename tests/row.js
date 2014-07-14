@@ -30,7 +30,7 @@ describe('Row tests', function() {
 
     describe('#delete()', function() {
         // We will set the data manually, when the item is received by the
-        it('It should return the object of the delted item', function(done) {
+        it('It should return the object of the deleted item', function(done) {
             Row
                 .then(function(row) {
                     return row.setData({
