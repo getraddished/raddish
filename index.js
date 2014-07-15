@@ -16,6 +16,7 @@ module.exports.Authenticator                = require('./lib/dispatcher/authenti
 module.exports.AbstractContollerBehavior    = require('./lib/controller/behavior/abstract');
 module.exports.AbstractTableBehavior        = require('./lib/database/table/behavior/abstract');
 module.exports.Application                  = require('./lib/application/application');
+module.exports.Filter                       = require('./lib/filter/filter');
 module.exports.Router                       = require('./lib/router/router');
 module.exports.HttpDispatcher               = require('./lib/dispatcher/http');
 module.exports.Controller                   = require('./lib/controller/default');
