@@ -9,7 +9,7 @@ function DemoApp() {
         component: __dirname + '/components',
         config: __dirname + '/config'
     });
-};
+}
 
 util.inherits(DemoApp, Application);
 
