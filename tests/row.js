@@ -12,7 +12,7 @@ describe('Row tests', function() {
                     });
                 })
                 .then(function(row) {
-                    return row.save()
+                    return row.save();
                 })
                 .then(function(row) {
                     return row.getData();
