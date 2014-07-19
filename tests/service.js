@@ -1,11 +1,10 @@
 require('./base');
-var Service     = Raddish.Service;
 var router      = new Raddish.Router();
 
 describe('Service loader tests.', function() {
     describe('#get', function() {
         it('The identifier home:menu.model.items should return a Model object', function(done) {
-            Service.get('home:menu.model.items', null)
+            ObjectManager.get('com://home/menu.model.items', null)
                 .then(function(model) {
                     model.should.be.an.instanceOf(Raddish.Model);
 
@@ -14,7 +13,7 @@ describe('Service loader tests.', function() {
         });
 
         it('The identifier home:menu.controller.items should return a Controller object', function(done) {
-            Service.get('home:menu.controller.items', {
+            ObjectManager.get('com://home/menu.controller.items', {
                     request: request
                 })
                 .then(function(controller) {
@@ -25,7 +24,7 @@ describe('Service loader tests.', function() {
         });
 
         it('Should return a Table object', function(done) {
-            Service.get('home:menu.database.table.items')
+            ObjectManager.get('com://home/menu.database.table.items')
                 .then(function(table) {
                     table.should.be.an.instanceOf(Raddish.Table);
 

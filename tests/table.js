@@ -3,10 +3,10 @@ require('./base');
 describe('Table tests', function() {
     describe('Constructor values', function() {
         it('Test various values', function(done) {
-            Service.get('home:menu.database.table.items')
+            ObjectManager.get('com://home/menu.database.table.items')
                 .then(function(table) {
                     table.should.have.property('name', 'menu_items')
-                    table.getIdentifier().toString().should.equal('home:menu.database.table.items');
+                    table.getIdentifier().toString().should.equal('com://home/menu.database.table.items');
 
                     table.getRow().should.be.an.instanceOf(Promise);
                     table.getRowset().should.be.an.instanceOf(Promise);
@@ -18,7 +18,7 @@ describe('Table tests', function() {
 
     describe('#getRow()', function() {
         it('Should return a Row object', function(done) {
-            Service.get('home:menu.database.table.items')
+            ObjectManager.get('com://home/menu.database.table.items')
                 .then(function(table) {
                     return table.getRow();
                 })
@@ -32,7 +32,7 @@ describe('Table tests', function() {
 
     describe('#getRowset()', function() {
         it('Should return a Rowset object', function(done) {
-            Service.get('home:menu.database.table.items')
+            ObjectManager.get('com://home/menu.database.table.items')
                 .then(function(table) {
                     return table.getRowset();
                 })

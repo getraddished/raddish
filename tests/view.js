@@ -1,6 +1,6 @@
 require('./base');
 
-var View = Service.get('home:menu.view.json');
+var View = ObjectManager.get('com://home/menu.view.json');
 
 describe('View tests', function() {
     describe('constructor values', function() {

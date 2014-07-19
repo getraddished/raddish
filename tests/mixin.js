@@ -1,10 +1,10 @@
 require('./base');
 var Mixin = require('../lib/mixin/mixin');
 
-var One = new Service({
+var One = new ObjectManager({
     identifier: 'home:menu.model.items'
 });
-var Two = new Service({
+var Two = new ObjectManager({
     identifier: 'home:content.model.articles'
 });
 

@@ -1,5 +1,5 @@
 require('./base');
-var Model = Service.get('home:menu.model.item');
+var Model = ObjectManager.get('com://home/menu.model.item');
 
 describe('Model Tests', function() {
     describe('#getList()', function() {
@@ -40,7 +40,8 @@ describe('Model Tests', function() {
         });
 
         it('Should return a Row Object', function(done) {
-            Model.then(function(model) {
+            Model
+                .then(function(model) {
                     model.set('id', 1);
 
                     return model.getItem();
