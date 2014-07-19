@@ -1,7 +1,7 @@
 Raddish Framework
 =================
 
-[![Build Status](http://getraddish.com/assets/images/logo.svg)](http://getraddish.com)
+[![Build Status](http://getraddish.com/assets/images/logo.svg =270x80)](http://getraddish.com)
 
   
 
