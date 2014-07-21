@@ -29,7 +29,8 @@
   },
   "devDependencies": {
       "mocha":          "*",
-      "should":         "*"
+      "should":         "*",
+      "istanbul":       "*"
   },
   "keywords": [
     "RAD",
