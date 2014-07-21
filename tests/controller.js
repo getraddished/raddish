@@ -25,6 +25,11 @@ describe('Controller Tests', function() {
                     result.should.be.an.Object;
                     result.data.rows.should.be.an.Object;
                     
+                    return result.display();
+                })
+                .then(function(result) {
+                    result.should.be.a.String;
+                    
                     done();
                 });
         });
@@ -54,6 +59,11 @@ describe('Controller Tests', function() {
                 .then(function(result) {
                     result.should.be.an.Object;
 
+                    return result.display()
+                })
+                .then(function(result) {
+                    result.should.be.a.String;
+                    
                     done();
                 });
         });
