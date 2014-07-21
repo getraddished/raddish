@@ -14,7 +14,7 @@
   },
   "scripts": {
       "test": "mocha tests/* -R spec -t 4000",
-      "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks -t 4000 tests/"
+      "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks -t 6000 tests/"
   },
   "dependencies": {
     "mysql":            "*",

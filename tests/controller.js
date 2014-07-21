@@ -6,7 +6,7 @@ describe('Controller Tests', function() {
         it('Should return an object', function(done) {
             ObjectManager.get('com://home/menu.controller.item')
                 .then(function(controller) {  
-                    controller.request = request;
+                    controller.request      = request.url.query;
                     controller.request.view = request.url.query.view || Inflector.pluralize(controller.getIdentifier().getName());
                     controller.format       = (request.url.query.format || Raddish.getConfig('format'));
 
@@ -33,9 +33,9 @@ describe('Controller Tests', function() {
             ObjectManager.get('com://home/menu.controller.item')
                 .then(function(controller) {
                     request.url.query.view = 'item';
-                    request.url.query.id = '1';
+                    request.url.query.id = '3';
                     
-                    controller.request = request;
+                    controller.request      = request.url.query;
                     controller.request.view = request.url.query.view || Inflector.pluralize(controller.getIdentifier().getName());
                     controller.format       = (request.url.query.format || Raddish.getConfig('format'));
 
