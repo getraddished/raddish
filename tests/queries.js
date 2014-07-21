@@ -24,6 +24,15 @@ describe('MySQL query tests', function() {
         mysql.select().table('foo_bar', 'tbl').columns(['tbl.bar', 'tbl.baz']).join('inner', 'bar_baz', 'tbl.bar = bar_baz.baz').limit(10).toQuery()
             .should.equal('SELECT `tbl`.`bar`, `tbl`.`baz` FROM `foo_bar` AS `tbl` INNER JOIN `bar_baz` ON (`tbl`.`bar` = `bar_baz`.`baz`) LIMIT 10');
         
+        mysql.select().table('foo_bar', 'tbl').columns(['tbl.bar', 'tbl.baz']).join('inner', 'bar_baz', 'tbl.bar = bar_baz.baz').limit(10).offset(10).toQuery()
+            .should.equal('SELECT `tbl`.`bar`, `tbl`.`baz` FROM `foo_bar` AS `tbl` INNER JOIN `bar_baz` ON (`tbl`.`bar` = `bar_baz`.`baz`) LIMIT 10 OFFSET 10');
+        
+        mysql.select().table('foo_bar', 'tbl').columns(['tbl.bar', 'tbl.baz']).where('tbl.bar', '=', '10').toQuery()
+            .should.equal('SELECT `tbl`.`bar`, `tbl`.`baz` FROM `foo_bar` AS `tbl` WHERE `tbl`.`bar` = \'10\'');
+
+        mysql.select().table('foo_bar', 'tbl').columns(['tbl.bar', 'tbl.baz']).order('tbl.bar').toQuery()
+            .should.equal('SELECT `tbl`.`bar`, `tbl`.`baz` FROM `foo_bar` AS `tbl` ORDER BY `tbl`.`bar` ASC');
+        
         done();
     });
 });
