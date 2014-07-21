@@ -4,7 +4,7 @@ var util        = require('util');
 
 function DemoApp() {
     DemoApp.super_.call(this);
-
+    
     this.setConfig({
         component: __dirname + '/components',
         config: __dirname + '/config'
