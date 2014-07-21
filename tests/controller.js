@@ -1,6 +1,74 @@
 require('./base');
 
 describe('Controller Tests', function() {
+    // We are going to work a little with the request.
+    describe('#_actionBrowse()', function() {
+        it('Should return an object', function(done) {
+            ObjectManager.get('com://home/menu.controller.item')
+                .then(function(controller) {  
+                    controller.request = request;
+                    controller.request.view = request.url.query.view || Inflector.pluralize(controller.getIdentifier().getName());
+                    controller.format       = (request.url.query.format || Raddish.getConfig('format'));
+
+                    return controller;
+                })
+                .then(function(controller) {                    
+                    var context         = controller.getContext();
+                    context.auth        = {username: 'Demo User', password: 'Demo'};
+                    context.request     = controller.getRequest();
+                    context.data        = {};
+                    
+                    return controller.execute('GET', context);
+                })
+                .then(function(result) {
+                    result.should.be.an.Object;
+                    
+                    done();
+                });
+        });
+    });
+    
+    describe('#_actionRead()', function() {
+        it('Should return an object', function(done) {
+            ObjectManager.get('com://home/menu.controller.item')
+                .then(function(controller) {
+                    request.url.query.view = 'item';
+                    request.url.query.id = '1';
+                    
+                    controller.request = request;
+                    controller.request.view = request.url.query.view || Inflector.pluralize(controller.getIdentifier().getName());
+                    controller.format       = (request.url.query.format || Raddish.getConfig('format'));
+
+                    return controller;
+                })
+                .then(function(controller) {
+                    var context         = controller.getContext();
+                    context.auth        = {username: 'Demo User', password: 'Demo'};
+                    context.request     = controller.getRequest();
+                    context.data        = {};
+
+                    return controller.execute('GET', context);
+                })
+                .then(function(result) {
+                    result.should.be.an.Object;
+
+                    done();
+                });
+        });
+    });
+    
+    describe('#_actionAdd()', function() {
+        
+    });
+
+    describe('#_actionUpdate()', function() {
+
+    });
+
+    describe('#_actionDelete()', function() {
+        
+    });
+    
     describe('#getModel()', function() {
         it('Should return a Model object', function(done) {
             ObjectManager.get('com://home/menu.controller.item')

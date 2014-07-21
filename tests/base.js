@@ -21,4 +21,5 @@ Request.url     = '/home/menu/items';
 Post.url        = '/home/menu/item?id=1';
 
 request         = new Raddish.Router().parseRequest(Request)[0];
+post            = new Raddish.Router().parseRequest(Post)[0];
 response        = Response;
