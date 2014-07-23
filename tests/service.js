@@ -38,8 +38,8 @@ describe('Service loader tests.', function() {
             Raddish.getConfig('db').should.be.an.instanceOf(Object).and.have.property('default');
         });
 
-        it('parameter layout should return the default layout (JSON)', function() {
-            Raddish.getConfig('layout').should.equal('json');
+        it('parameter format should return the default format (JSON)', function() {
+            Raddish.getConfig('format').should.equal('json');
         });
     });
 });

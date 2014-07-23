@@ -8,7 +8,7 @@
             "prefix": false
 		}
 	},
-	"layout": "json",
+	"format": "json",
     "gzip": true,
     "port": 1337
 }
