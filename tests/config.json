@@ -1,12 +1,6 @@
 {
 	"db": {
-        "default": {
-            "host": "33.33.33.58",
-            "user": "root",
-            "password": "root",
-            "database": "devel_cp"
-        },
-		"default_old": {
+		"default": {
 			"host": "37.34.54.223",
 			"user": "demo",
 			"password": "Tester22",
