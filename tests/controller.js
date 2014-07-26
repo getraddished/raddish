@@ -23,9 +23,9 @@ describe('Controller Tests', function() {
                 })
                 .then(function(result) {
                     result.should.be.an.Object;
-                    result.data.rows.should.be.an.Object;
+                    result.result.data.rows.should.be.an.Object;
                     
-                    return result.display();
+                    return result.result.display();
                 })
                 .then(function(result) {
                     result.should.be.a.String;
@@ -59,7 +59,7 @@ describe('Controller Tests', function() {
                 .then(function(result) {
                     result.should.be.an.Object;
 
-                    return result.display()
+                    return result.result.display()
                 })
                 .then(function(result) {
                     result.should.be.a.String;
@@ -96,9 +96,9 @@ describe('Controller Tests', function() {
                 })
                 .then(function(result) {
                     result.should.be.an.Object;
-                    result.data.data.title.should.equal('Demo_Test');
+                    result.result.data.data.title.should.equal('Demo_Test');
                     
-                    AddedID = result.data.data.id;
+                    AddedID = result.result.data.id;
                     done();
                 });
         });
@@ -131,7 +131,7 @@ describe('Controller Tests', function() {
                 })
                 .then(function(result) {
                     result.should.be.an.Object;
-                    result.data.data.title.should.equal('Demo_Test22');
+                    result.result.data.data.title.should.equal('Demo_Test22');
                     
                     done();
                 });
