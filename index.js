@@ -13,8 +13,6 @@ Socket                                      = require('./lib/socket/socket')
 
 module.exports                              = Raddish;
 module.exports.Authenticator                = require('./lib/dispatcher/authenticator/default');
-module.exports.ControllerBehavior           = require('./lib/controller/behavior/abstract');
-module.exports.TableBehavior                = require('./lib/database/table/behavior/abstract');
 module.exports.Application                  = require('./lib/application/application');
 module.exports.Filter                       = require('./lib/filter/filter');
 module.exports.Router                       = require('./lib/router/router');
@@ -32,6 +30,7 @@ module.exports.Rowset                       = require('./lib/database/rowset/def
 module.exports.RowsetAbstract               = require('./lib/database/rowset/abstract');
 module.exports.Permission                   = require('./lib/controller/permission/default');
 module.exports.Plugin                       = require('./lib/plugin/plugin');
+module.exports.Behavior                     = require('./lib/command/behavior/behavior');
 module.exports.RaddishError                 = RaddishError;
 module.exports.ObjectManager                = ObjectManager;
 module.exports.Socket                       = Socket;
