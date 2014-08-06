@@ -1,16 +1,19 @@
 require('./base');
-var Model = ObjectManager.get('com://home/menu.model.item');
 
 describe('Model Tests', function() {
     describe('#getList()', function() {
         it('Should return a Promise Object', function() {
-            Model.then(function(model) {
-                model.getList().should.be.an.instanceOf(Promise);
-            });
+            ObjectManager.get('com://home/menu.model.item')
+                .then(function(model) {
+                    console.log(model.getIdentifier().toString());
+                    
+                    model.getList().should.be.an.instanceOf(Promise);
+                });
         });
 
         it('Should return a Rowset Object', function(done) {
-            Model.then(function(model) {
+            ObjectManager.get('com://home/menu.model.item')
+                .then(function(model) {
                     return model.getList();
                 })
                 .then(function(list) {
@@ -21,7 +24,8 @@ describe('Model Tests', function() {
         });
 
         it('Should have a rows array', function(done) {
-            Model.then(function(model) {
+            ObjectManager.get('com://home/menu.model.item')
+                .then(function(model) {
                     return model.getList();
                 })
                 .then(function(list) {
@@ -34,13 +38,14 @@ describe('Model Tests', function() {
 
     describe('#getItem()', function() {
         it('should return a Promise Object', function() {
-            Model.then(function(model) {
-                model.getItem().should.be.an.instanceOf(Promise);
-            });
+            ObjectManager.get('com://home/menu.model.item')
+                .then(function(model) {
+                    model.getItem().should.be.an.instanceOf(Promise);
+                });
         });
 
         it('Should return a Row Object', function(done) {
-            Model
+            ObjectManager.get('com://home/menu.model.item')
                 .then(function(model) {
                     model.set('id', 1);
 
@@ -54,7 +59,8 @@ describe('Model Tests', function() {
         });
 
         it('Should have a data object', function(done) {
-            Model.then(function(model) {
+            ObjectManager.get('com://home/menu.model.item')
+                .then(function(model) {
                     model.set('id', 1);
 
                     return model.getItem();
