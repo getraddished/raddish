@@ -6,7 +6,7 @@
  * @since 28 March 2014
  */
 Promise                                     = require('bluebird');
-RaddishError                                = require('./lib/error/raddish');
+RaddishError                                = require('./lib/error/error');
 ObjectManager                               = require('./lib/object/manager');
 Raddish                                     = require('./lib/raddish/raddish');
 Socket                                      = require('./lib/socket/socket')
