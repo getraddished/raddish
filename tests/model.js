@@ -5,8 +5,6 @@ describe('Model Tests', function() {
         it('Should return a Promise Object', function() {
             ObjectManager.get('com://home/menu.model.item')
                 .then(function(model) {
-                    console.log(model.getIdentifier().toString());
-                    
                     model.getList().should.be.an.instanceOf(Promise);
                 });
         });
