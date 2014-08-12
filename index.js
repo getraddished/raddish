@@ -8,6 +8,7 @@
 Promise                                     = require('bluebird');
 RaddishError                                = require('./lib/error/error');
 ObjectManager                               = require('./lib/object/manager');
+ObjectLoader                                = require('./lib/object/loader/loader');
 Raddish                                     = require('./lib/raddish/raddish');
 Socket                                      = require('./lib/socket/socket')
 
@@ -23,6 +24,7 @@ module.exports.ViewAbstract                 = require('./lib/view/abstract');
 module.exports.Mixin                        = require('./lib/mixin/mixin');
 module.exports.Model                        = require('./lib/model/default');
 module.exports.ModelAbstract                = require('./lib/model/abstract');
+module.exports.ObjectLoader                 = ObjectLoader;
 module.exports.Table                        = require('./lib/database/table/default');
 module.exports.Row                          = require('./lib/database/row/default');
 module.exports.RowAbstract                  = require('./lib/database/row/abstract');
