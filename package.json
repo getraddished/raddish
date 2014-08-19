@@ -30,7 +30,9 @@
   "devDependencies": {
       "mocha":          "*",
       "should":         "*",
-      "istanbul":       "*"
+      "istanbul":       "*",
+      "mock-req":       "*",
+      "mock-res":       "*"
   },
   "keywords": [
     "RAD",
