@@ -17,6 +17,8 @@ var Behavior    = ObjectLoader.require('core:command.behavior.behavior');
 
 function Transactionable(config) {
     Behavior.call(this, config);
+
+    this.registerMethod('initialize.get', this.initializeGet)
 }
 
 util.inherits(Transactionable, Behavior);
@@ -35,10 +37,10 @@ util.inherits(Transactionable, Behavior);
  * request: The data in the request (get variables)
  * result:  The resulting data from the behavior (only available in "onAfter" methods)
  */
-Transactionable.prototype.onInitializeGet = function(context) {
+Transactionable.prototype.initializeGet = function(context) {
     var self    = this;
     var objects = [];
-
+    console.log(context);
 
     var object = ObjectManager.get('com://home/bank.model.account')
         .then(function(model) {
