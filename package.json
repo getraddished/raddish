@@ -17,22 +17,22 @@
       "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks -t 15000 tests/"
   },
   "dependencies": {
-    "mysql":            "*",
-    "formidable":       "*",
-    "bluebird":         "*",
-    "mime":             "*",
-    "usage":            "*",
-    "update-notifier":  "*",
-    "socket.io":        "*",
-    "clone":            "*",
-    "mongodb":          "*"
+    "mysql":            "2.4.3",
+    "formidable":       "1.0.15",
+    "bluebird":         "2.3.2",
+    "mime":             "1.2.11",
+    "usage":            "0.4.12",
+    "update-notifier":  "0.2.0",
+    "socket.io":        "1.0.6",
+    "clone":            "0.1.18",
+    "mongodb":          "1.4.9"
   },
   "devDependencies": {
-      "mocha":          "*",
-      "should":         "*",
-      "istanbul":       "*",
-      "mock-req":       "*",
-      "mock-res":       "*"
+      "mocha":          "1.21.4",
+      "should":         "4.0.4",
+      "istanbul":       "0.3.0",
+      "mock-req":       "0.1.0",
+      "mock-res":       "0.1.0"
   },
   "keywords": [
     "RAD",
