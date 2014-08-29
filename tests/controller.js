@@ -6,14 +6,14 @@ describe('Controller Tests', function() {
     describe('#_actionBrowse()', function() {
         it('Should return a Rowset object', function(done) {
             ObjectManager.get('com://home/menu.controller.item')
-                .then(function(controller) {  
+                .then(function(controller) {
                     controller.request      = request.url.query;
                     controller.request.view = request.url.query.view || Inflector.pluralize(controller.getIdentifier().getName());
                     controller.format       = (request.url.query.format || Raddish.getConfig('format'));
 
                     return controller;
                 })
-                .then(function(controller) {                    
+                .then(function(controller) {
                     var context         = controller.getContext();
                     context.auth        = {username: 'Demo User', password: 'Demo'};
                     context.request     = controller.getRequest();
@@ -24,24 +24,24 @@ describe('Controller Tests', function() {
                 .then(function(result) {
                     result.should.be.an.Object;
                     result.result.data.rows.should.be.an.Object;
-                    
+
                     return result.result.display();
                 })
                 .then(function(result) {
                     result.should.be.a.String;
-                    
+
                     done();
                 });
         });
     });
-    
+
     describe('#_actionRead()', function() {
         it('Should return a Row object', function(done) {
             ObjectManager.get('com://home/menu.controller.item')
                 .then(function(controller) {
                     request.url.query.view = 'item';
                     request.url.query.id = '3';
-                    
+
                     controller.request      = request.url.query;
                     controller.request.view = request.url.query.view || Inflector.pluralize(controller.getIdentifier().getName());
                     controller.format       = (request.url.query.format || Raddish.getConfig('format'));
@@ -63,12 +63,12 @@ describe('Controller Tests', function() {
                 })
                 .then(function(result) {
                     result.should.be.a.String;
-                    
+
                     done();
                 });
         });
     });
-    
+
     describe('#_actionAdd()', function() {
         it('Should return a newly created object', function(done) {
             ObjectManager.get('com://home/menu.controller.item')
@@ -97,7 +97,7 @@ describe('Controller Tests', function() {
                 .then(function(result) {
                     result.should.be.an.Object;
                     result.result.data.data.title.should.equal('Demo_Test');
-                    
+
                     AddedID = result.result.data.id;
                     done();
                 });
@@ -132,7 +132,7 @@ describe('Controller Tests', function() {
                 .then(function(result) {
                     result.should.be.an.Object;
                     result.result.data.data.title.should.equal('Demo_Test22');
-                    
+
                     done();
                 });
         });
@@ -170,7 +170,7 @@ describe('Controller Tests', function() {
                 });
         });
     });
-    
+
     describe('#getModel()', function() {
         it('Should return a Model object', function(done) {
             ObjectManager.get('com://home/menu.controller.item')
