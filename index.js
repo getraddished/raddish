@@ -6,15 +6,14 @@
  * @since 28 March 2014
  */
 Promise                                     = require('bluebird');
-RaddishError                                = require('./lib/error/raddish');
+RaddishError                                = require('./lib/error/error');
 ObjectManager                               = require('./lib/object/manager');
+ObjectLoader                                = require('./lib/object/loader/loader');
 Raddish                                     = require('./lib/raddish/raddish');
 Socket                                      = require('./lib/socket/socket')
 
 module.exports                              = Raddish;
 module.exports.Authenticator                = require('./lib/dispatcher/authenticator/default');
-module.exports.ControllerBehavior           = require('./lib/controller/behavior/abstract');
-module.exports.TableBehavior                = require('./lib/database/table/behavior/abstract');
 module.exports.Application                  = require('./lib/application/application');
 module.exports.Filter                       = require('./lib/filter/filter');
 module.exports.Router                       = require('./lib/router/router');
@@ -25,6 +24,7 @@ module.exports.ViewAbstract                 = require('./lib/view/abstract');
 module.exports.Mixin                        = require('./lib/mixin/mixin');
 module.exports.Model                        = require('./lib/model/default');
 module.exports.ModelAbstract                = require('./lib/model/abstract');
+module.exports.ObjectLoader                 = ObjectLoader;
 module.exports.Table                        = require('./lib/database/table/default');
 module.exports.Row                          = require('./lib/database/row/default');
 module.exports.RowAbstract                  = require('./lib/database/row/abstract');
@@ -32,6 +32,7 @@ module.exports.Rowset                       = require('./lib/database/rowset/def
 module.exports.RowsetAbstract               = require('./lib/database/rowset/abstract');
 module.exports.Permission                   = require('./lib/controller/permission/default');
 module.exports.Plugin                       = require('./lib/plugin/plugin');
+module.exports.Behavior                     = require('./lib/command/behavior/behavior');
 module.exports.RaddishError                 = RaddishError;
 module.exports.ObjectManager                = ObjectManager;
 module.exports.Socket                       = Socket;
