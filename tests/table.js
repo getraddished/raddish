@@ -6,7 +6,7 @@ describe('Table tests', function() {
             ObjectManager.get('com://home/menu.database.table.items')
                 .then(function(table) {
                     table.should.have.property('name', 'menu_items')
-                    table.getIdentifier().toString().should.equal('com://home/menu.database.table.items');
+                    table.getIdentifier().toString().should.equal('com://home/menu.database.table.item');
 
                     table.getRow().should.be.an.instanceOf(Promise);
                     table.getRowset().should.be.an.instanceOf(Promise);
