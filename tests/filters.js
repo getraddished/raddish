@@ -87,5 +87,12 @@ describe('Filter Tests', function() {
 
             filter.sanitize('this is auml;n incorrect string').should.equal('this is aen incorrect string');
         });
+
+        it('Should return a correct command', function() {
+            var filter = getFilter('cmd');
+
+            filter.sanitize('whoam@#$i').should.equal('whoami');
+            filter.sanitize('who am i').should.equal('whoami');
+        })
     });
 });
