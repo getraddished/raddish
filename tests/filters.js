@@ -46,6 +46,13 @@ describe('Filter Tests', function() {
             filter.validate('this-is-a-correct-slug!').should.be.false;
             filter.validate('This-Is-A-Correct-Slug').should.be.true;
         });
+
+        it('Should be a correct string', function() {
+            var filter = getFilter('ascii');
+
+            filter.validate('this is a correct string').should.be.true;
+            filter.validate('this is àn incorrect string').should.be.false;
+        });
     });
 
     describe('Various sanatize Tests', function() {
@@ -73,6 +80,12 @@ describe('Filter Tests', function() {
             var filter = getFilter('slug');
 
             filter.sanitize('This is an invalid Slug').should.equal('this-is-an-invalid-slug');
+        });
+
+        it('Should return a correct string', function() {
+            var filter = getFilter('ascii');
+
+            filter.sanitize('this is auml;n incorrect string').should.equal('this is aen incorrect string');
         });
     });
 });
