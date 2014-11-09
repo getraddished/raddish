@@ -15,6 +15,7 @@
             "type": "mongo"
         }
 	},
+    "plugins": "/tests/plugins",
 	"format": "json",
     "gzip": true,
     "port": 1337
