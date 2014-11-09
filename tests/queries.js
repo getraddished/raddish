@@ -107,6 +107,9 @@ describe('Mongo query tests', function() {
         mongo.update().table('foo_bar').set('bar', 20).toQuery()
             .bar.should.equal(20);
 
+        mongo.update().table('foo_bar').set('bar', 20).where('foo.bar', '=', 1).toQuery()
+            .bar.should.equal(20);
+
         mongo.update().table('foo_bar').set('bar', 20).getMethod()
             .should.equal('save');
     });
