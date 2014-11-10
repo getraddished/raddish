@@ -26,7 +26,8 @@
     "socket.io":        "1.0.6",
     "clone":            "0.1.18",
     "mongodb":          "1.4.9",
-    "sqlite3":          "3.0.2"
+    "sqlite3":          "3.0.2",
+    "universal-query":  "*"
   },
   "devDependencies": {
       "mocha":          "1.21.4",
