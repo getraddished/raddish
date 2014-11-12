@@ -32,6 +32,18 @@ describe('Model Tests', function() {
                     done();
                 });
         });
+
+        it('Should return a valid rowset', function(done) {
+            ObjectManager.get('com://home/content.model.article')
+                .then(function(model) {
+                    return model.getList();
+                })
+                .then(function(list) {
+                    list.rows.should.be.an.Array;
+
+                    done();
+                })
+        });
     });
 
     describe('#getItem()', function() {

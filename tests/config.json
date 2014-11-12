@@ -6,8 +6,16 @@
 			"password": "Tester22",
 			"database": "raddish_demo",
             "prefix": false
-		}
+		},
+        "mongo": {
+            "host": "37.34.54.223",
+            "user": "",
+            "password": "",
+            "database": "raddish_demo",
+            "type": "mongo"
+        }
 	},
+    "plugins": "/tests/plugins",
 	"format": "json",
     "gzip": true,
     "port": 1337

@@ -6,7 +6,7 @@ function getFilter(filter) {
     return new Obj();
 }
 
-describe('Controller Tests', function() {
+describe('Filter Tests', function() {
     describe('Various validates.', function() {
         it('Test should return true.', function() {
             var filter = getFilter('string');
@@ -37,6 +37,22 @@ describe('Controller Tests', function() {
 
             filter.validate('88f931198d715c2a647644f70f45fa29').should.be.true;
         });
+
+        it('Should be a correct slug.', function() {
+            var filter = getFilter('slug');
+
+            filter.validate('this-is-a-correct-slug').should.be.true;
+            filter.validate('this is a incorrect slug').should.be.false;
+            filter.validate('this-is-a-correct-slug!').should.be.false;
+            filter.validate('This-Is-A-Correct-Slug').should.be.true;
+        });
+
+        it('Should be a correct string', function() {
+            var filter = getFilter('ascii');
+
+            filter.validate('this is a correct string').should.be.true;
+            filter.validate('this is àn incorrect string').should.be.false;
+        });
     });
 
     describe('Various sanatize Tests', function() {
@@ -59,5 +75,24 @@ describe('Controller Tests', function() {
 
             filter.sanitize('88f931198d715c2a647644f70f45fa29123798456439').should.equal('88f931198d715c2a647644f70f45fa29');
         });
+
+        it('Should return a correct slug', function() {
+            var filter = getFilter('slug');
+
+            filter.sanitize('This is an invalid Slug').should.equal('this-is-an-invalid-slug');
+        });
+
+        it('Should return a correct string', function() {
+            var filter = getFilter('ascii');
+
+            filter.sanitize('this is auml;n incorrect string').should.equal('this is aen incorrect string');
+        });
+
+        it('Should return a correct command', function() {
+            var filter = getFilter('cmd');
+
+            filter.sanitize('whoam@#$i').should.equal('whoami');
+            filter.sanitize('who am i').should.equal('whoami');
+        })
     });
 });
