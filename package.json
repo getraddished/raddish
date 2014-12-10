@@ -12,7 +12,7 @@
       "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks -t 15000 tests/"
   },
   "dependencies": {
-    "mysql":            "2.4.3",
+    "mysql":            "2.5.3",
     "formidable":       "1.0.15",
     "bluebird":         "2.3.2",
     "mime":             "1.2.11",
