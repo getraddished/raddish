@@ -22,7 +22,8 @@
     "clone":            "0.1.18",
     "mongodb":          "1.4.9",
     "sqlite3":          "3.0.2",
-    "universal-query":  "*"
+    "universal-query":  "*",
+    "through2":         "0.6.3"
   },
   "devDependencies": {
       "mocha":          "1.21.4",
