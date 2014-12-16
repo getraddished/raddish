@@ -39,6 +39,7 @@
     "MVC",
     "DCI",
     "fallback",
-    "multidatabase"
+    "multidatabase",
+    "streams"
   ]
 }
