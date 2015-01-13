@@ -1,23 +1,24 @@
 {
   "name": "raddish",
   "description": "Another MVC framework.",
-  "version": "2.2.1",
+  "version": "2.3.0",
+  "author": {
+    "name": "Jasper van Rijbroek",
+    "email": "jasper@jvar.nl",
+    "url": "http://jvar.nl"
+  },
+  "homepage": "http://getraddish.com",
   "main": "./index.js",
   "repository": {
       "type": "git",
       "url": "https://github.com/JaspervRijbroek/raddish.git"
-  },
-  "devDependencies": {
-      "should": "*",
-      "mocha": "*",
-      "istanbul": "*"
   },
   "scripts": {
       "test": "mocha tests/* -R spec -t 15000",
       "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks -t 15000 tests/"
   },
   "dependencies": {
-    "mysql":            "2.4.3",
+    "mysql":            "2.5.3",
     "formidable":       "1.0.15",
     "bluebird":         "2.3.2",
     "mime":             "1.2.11",
@@ -43,6 +44,7 @@
     "MVC",
     "DCI",
     "fallback",
-    "multidatabase"
+    "multidatabase",
+    "streams"
   ]
 }
