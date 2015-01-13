@@ -2,6 +2,11 @@
   "name": "raddish",
   "description": "Another MVC framework.",
   "version": "2.3.0",
+  "author": {
+    "name": "Jasper van Rijbroek",
+    "email": "jasper@jvar.nl",
+    "url": "http://jvar.nl"
+  },
   "homepage": "http://getraddish.com",
   "main": "./index.js",
   "repository": {
