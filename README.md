@@ -1,9 +1,7 @@
 Raddish Framework
 =================
 
-[![Build Status](http://getraddish.com/assets/images/logo.svg)](http://getraddish.com)
-
-  
+[![Raddish Logo](http://getraddish.com/assets/images/logo.svg)](http://getraddish.com)
 
 [![Build Status](https://api.travis-ci.org/JaspervRijbroek/raddish.svg)](https://travis-ci.org/JaspervRijbroek/raddish)
 [![Code Climate](https://codeclimate.com/github/JaspervRijbroek/raddish.png)](https://codeclimate.com/github/JaspervRijbroek/raddish)
@@ -12,7 +10,14 @@ Raddish Framework
 What is Raddish Framework
 -------------------------
 
-Raddish is an open-source NodeJS Framework for web applications.
+Raddish is an open-source NodeJS Framework for web applications for modern web applications. 
+Developed and maintained by passionate developers.
+
+The design pattern based architecure gives more flexibility to your applications.
+Basically everything being written becomes resuable and extensible pieces of code.
+
+Raddish uses a [component based architecure](http://en.wikipedia.org/wiki/Component-based_software_engineering) seperated by applications,
+working together accoring the [Hierarchical Model-View-Contoller](http://en.wikipedia.org/wiki/Hierarchical_model%E2%80%93view%E2%80%93controller) **(HMVC)** pattern.
 
 Why Raddish Framework
 ---------------------
