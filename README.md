@@ -9,9 +9,6 @@ Raddish Framework
 [![Code Climate](https://codeclimate.com/github/JaspervRijbroek/raddish.png)](https://codeclimate.com/github/JaspervRijbroek/raddish)
 [![Coverage Status](https://coveralls.io/repos/JaspervRijbroek/raddish/badge.png?branch=develop)](https://coveralls.io/r/JaspervRijbroek/raddish?branch=develop)
 
-Raddish Framework
-=================
-
 What is Raddish Framework
 -------------------------
 
