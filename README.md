@@ -38,4 +38,6 @@ We use the [GitFlow](http://nvie.com/posts/a-successful-git-branching-model/) br
 
 Where to send your pull request to:
 
-- When sending a pull request for a bugfix please send it to the ```develop``` branch so the bugfix will be added to master and develop.
+- When sending a pull request for a bugfix please prepend ```bugfix/``` to your branch name and send it to the ```develop``` branch so the bugfix will be added to master and develop. (non-breaking changes)
+- If you are sending a pull request for a feature please prepend ```feature/``` to your branch name and send it to the ```develop``` branch, this to ensure the feature to be added to the upcoming release. (minor/ breaking code changes).
+- For other pull requests please send them directly to the ```develop``` branch.
