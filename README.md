@@ -39,4 +39,3 @@ We use the [GitFlow](http://nvie.com/posts/a-successful-git-branching-model/) br
 Where to send your pull request to:
 
 - When sending a pull request for a bugfix please send it to the ```develop``` branch so the bugfix will be added to master and develop.
-- 
