@@ -22,8 +22,21 @@ working together accoring the [Hierarchical Model-View-Contoller](http://en.wiki
 Why Raddish Framework
 ---------------------
 
+Raddish is build to help developers create a fast and reliable backend for web applications,
+Raddish tries to solve this by doing to following
 
+- Provide a solid, modern and lean architecture for building applications
+- Allow components to be flexible, reusable and extendable with ease.
 
 Contributing
 ------------
 
+We love you contributing to Raddish Framework, this can be anything from bug fixes to features and inprovements.
+We do appreciate some guidelines in contributes.
+
+We use the [GitFlow](http://nvie.com/posts/a-successful-git-branching-model/) branching model which keeps a nice separation of bugfixes and features.
+
+Where to send your pull request to:
+
+- When sending a pull request for a bugfix please send it to the ```develop``` branch so the bugfix will be added to master and develop.
+- 
