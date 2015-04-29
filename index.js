@@ -38,4 +38,5 @@ module.exports.RowsetAbstract               = require('./lib/database/rowset/abs
 module.exports.Socket                       = Socket;
 module.exports.Table                        = require('./lib/database/table/default');
 module.exports.ViewJson                     = require('./lib/view/json');
+module.exports.ViewFile                     = require('./lib/view/file');
 module.exports.ViewAbstract                 = require('./lib/view/abstract');
