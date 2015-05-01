@@ -4,3 +4,4 @@ themes
 yuidoc.json
 docs
 npm-debug.log
+.npmrc
