@@ -1,0 +1,6 @@
+{
+  "options": {
+    "themedir": "yuidoc/theme",
+    "outdir": "yuidoc/raddish"
+  }
+}

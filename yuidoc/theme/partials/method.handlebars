@@ -1,0 +1,145 @@
+<div id="method_{{name}}" class="method item">
+    <h3 class="title {{#if params}}has_args{{/if}}">{{name}}</h3>
+
+    {{#if params}}
+        <div class="arguments">
+            <span class="paren">(</span>
+            <ul class="args-list inline commas">
+                {{#params}}
+                    {{#if optional}}
+                        <li class="arg optional">
+                            {{name}}
+                        </li>
+                    {{else}}
+                        <li class="arg">
+                            {{name}}
+                        </li>
+                    {{/if}}
+                {{/params}}
+            </ul>
+            <span class="paren">)</span>
+        </div>
+    {{else}}
+        <div class="arguments">
+            <span class="paren">()</span>
+        </div>
+    {{/if}}
+
+    {{#if deprecated}}
+        <span class="flag deprecated"{{#if deprecationMessage}} title="{{deprecationMessage}}"{{/if}}>deprecated</span>
+    {{/if}}
+
+    {{#if access}}
+        <span class="flag {{access}}">{{access}}</span>
+    {{/if}}
+
+    {{#if final}}
+        <span class="flag final">final</span>
+    {{/if}}
+
+    {{#if static}}
+        <span class="flag static">static</span>
+    {{/if}}
+
+    {{#if chainable}}
+        <span class="flag chainable">chainable</span>
+    {{/if}}
+
+    {{#if async}}
+        <span class="flag async">async</span>
+    {{/if}}
+
+    <div class="meta">
+        {{#if overwritten_from}}
+        <p>Inherited from
+            <a href="{{crossLinkRaw overwritten_from/class}}#method_{{overwritten_from/name}}">
+                {{overwritten_from/class}}
+            </a>
+            {{#if foundAt}}
+                but overwritten in
+            {{/if}}
+        {{else}}
+            {{#if extended_from}}
+            <p>Inherited from
+                <a href="{{crossLinkRaw extended_from}}#method_{{name}}">{{extended_from}}</a>:
+            {{else}}
+                {{#providedBy}}
+                    <p>Provided by the <a href="../modules/{{.}}.html">{{.}}</a> module.</p>
+                {{/providedBy}}
+            <p>
+                {{#if foundAt}}
+                    Defined in
+                {{/if}}
+            {{/if}}
+        {{/if}}
+        {{#if foundAt}}
+            <a href="{{foundAt}}">`{{{file}}}:{{{line}}}`</a>
+        {{/if}}
+    </p>
+
+
+        {{#if deprecationMessage}}
+            <p>Deprecated: {{deprecationMessage}}</p>
+        {{/if}}
+
+        {{#if since}}
+            <p>Available since {{since}}</p>
+        {{/if}}
+    </div>
+
+    <div class="description">
+        {{{methodDescription}}}
+    </div>
+
+    {{#if params}}
+        <h3>Parameters</h3>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Type
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#params}}
+                    <tr>
+                        <td>
+                            {{name}}
+                        </td>
+                        <td>
+                            {{type}}
+                        </td>
+                        <td>
+                            {{{description}}}
+                        </td>
+                    </tr>
+                {{/params}}
+            </tbody>
+        </table>
+    {{/if}}
+
+    {{#return}}
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            {{#if description}}
+                {{#if type}}
+                    <span class="type">{{#crossLink type}}{{/crossLink}}</span>:
+                {{/if}}
+                {{{description}}}
+            {{else}}
+                {{#if type}}
+                    <span class="type">{{#crossLink type}}{{/crossLink}}</span>:
+                {{/if}}
+            {{/if}}
+        </div>
+    {{/return}}
+</div>
