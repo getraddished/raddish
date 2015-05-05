@@ -1,5 +1,5 @@
 <div id="method_{{name}}" class="method item">
-    <h3 class="title {{#if params}}has_args{{/if}}">{{name}}</h3>
+    <h3 class="title">{{name}}</h3>
 
     {{#if params}}
         <div class="arguments">
@@ -73,7 +73,7 @@
             {{/if}}
         {{/if}}
         {{#if foundAt}}
-            <a href="{{foundAt}}">`{{{file}}}:{{{line}}}`</a>
+            <a href="https://github.com/JaspervRijbroek/raddish/tree/master/{{{file}}}#L{{{line}}}" target="_blank">`{{{file}}}:{{{line}}}`</a>
         {{/if}}
     </p>
 
