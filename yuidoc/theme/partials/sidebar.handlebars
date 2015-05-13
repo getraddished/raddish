@@ -1,0 +1,9 @@
+<ul>
+    {{#classes}}
+        <li {% if page.url == '{{../projectRoot}}classes/{{name}}.html' %} class="active" {% endif %}>
+            <a href="{{../projectRoot}}classes/{{name}}.html">
+                {{displayName}}
+            </a>
+        </li>
+    {{/classes}}
+</ul>

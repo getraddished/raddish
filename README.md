@@ -6,6 +6,7 @@ Raddish Framework
 [![Build Status](https://api.travis-ci.org/JaspervRijbroek/raddish.svg)](https://travis-ci.org/JaspervRijbroek/raddish)
 [![Code Climate](https://codeclimate.com/github/JaspervRijbroek/raddish.png)](https://codeclimate.com/github/JaspervRijbroek/raddish)
 [![Coverage Status](https://coveralls.io/repos/JaspervRijbroek/raddish/badge.png?branch=develop)](https://coveralls.io/r/JaspervRijbroek/raddish?branch=develop)
+[![Inline docs](http://inch-ci.org/github/JaspervRijbroek/raddish.svg?branch=develop&style=shields)](http://inch-ci.org/github/JaspervRijbroek/raddish)
 
 What is Raddish Framework
 -------------------------
