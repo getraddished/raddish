@@ -2,6 +2,7 @@
   "name": "raddish",
   "description": "Another MVC framework.",
   "version": "2.4.11",
+  "license": "MIT",
   "author": {
     "name": "Jasper van Rijbroek",
     "email": "jasper@jvar.nl",
