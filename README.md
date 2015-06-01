@@ -7,6 +7,7 @@ Raddish Framework
 [![Code Climate](https://img.shields.io/codeclimate/github/JaspervRijbroek/raddish.svg?style=flat-square)](https://codeclimate.com/github/JaspervRijbroek/raddish)
 [![Coverage Status](https://img.shields.io/coveralls/JaspervRijbroek/raddish.svg?style=flat-square)](https://coveralls.io/r/JaspervRijbroek/raddish?branch=develop)
 [![Inline docs](http://inch-ci.org/github/JaspervRijbroek/raddish.svg?branch=develop&style=shields)](http://inch-ci.org/github/JaspervRijbroek/raddish)
+[![Author](https://img.shields.io/badge/author-%40jaspervrijbro-brightgreen.svg?style=flat-square)](https://twitter.com/JaspervanRijbro)
 
 What is Raddish Framework
 -------------------------
