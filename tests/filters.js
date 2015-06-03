@@ -32,6 +32,13 @@ describe('Filter Tests', function() {
             filter.validate('jasper199069@blaa$$$.!@#$').should.be.false;
         });
 
+        it('Should be correct JSON', function() {
+            var filter = getFilter('json');
+
+            filter.validate('p').should.be.false;
+            filter.validate('{"hello": "world"}').should.be.false;
+        });
+
         it('Should be a correct MD5', function() {
             var filter = getFilter('md5');
 
@@ -80,6 +87,13 @@ describe('Filter Tests', function() {
             var filter = getFilter('slug');
 
             filter.sanitize('This is an invalid Slug').should.equal('this-is-an-invalid-slug');
+        });
+
+        it('Should return correct JSON', function() {
+            var filter = getFilter('json');
+
+            filter.sanitize('p').shoud.equal('"p"');
+            filter.sanitize({hello: 'world'}).should.equal('{"hello":"world"}');
         });
 
         it('Should return a correct string', function() {
