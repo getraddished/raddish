@@ -36,7 +36,7 @@ describe('Filter Tests', function() {
             var filter = getFilter('json');
 
             filter.validate('p').should.be.false;
-            filter.validate('{"hello": "world"}').should.be.false;
+            filter.validate('{"hello": "world"}').should.be.true;
         });
 
         it('Should be a correct MD5', function() {
@@ -92,7 +92,7 @@ describe('Filter Tests', function() {
         it('Should return correct JSON', function() {
             var filter = getFilter('json');
 
-            filter.sanitize('p').shoud.equal('"p"');
+            filter.sanitize('p').should.equal('"p"');
             filter.sanitize({hello: 'world'}).should.equal('{"hello":"world"}');
         });
 
