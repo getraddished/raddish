@@ -4,4 +4,6 @@ node_js:
   - "0.12"
   - iojs
 script: "npm run-script test-travis"
+before_script:
+  - mysql -e 'create database raddish_demo; create table if not exists menu_items (menu_item_id bigint(20) not null auto_increment,title varchar(255),component varchar(255),primary key(`menu_item_id`))'
 after_script: "npm install coveralls@2.10.0 && cat ./coverage/lcov.info | coveralls"
