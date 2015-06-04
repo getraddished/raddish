@@ -3,10 +3,11 @@ Raddish Framework
 
 [![Raddish Logo](http://getraddish.com/assets/images/logo.svg)](http://getraddish.com)
 
-[![Build Status](https://api.travis-ci.org/JaspervRijbroek/raddish.svg)](https://travis-ci.org/JaspervRijbroek/raddish)
-[![Code Climate](https://codeclimate.com/github/JaspervRijbroek/raddish.png)](https://codeclimate.com/github/JaspervRijbroek/raddish)
-[![Coverage Status](https://coveralls.io/repos/JaspervRijbroek/raddish/badge.png?branch=develop)](https://coveralls.io/r/JaspervRijbroek/raddish?branch=develop)
+[![Build Status](https://img.shields.io/travis/JaspervRijbroek/raddish.svg?style=flat-square)](https://travis-ci.org/JaspervRijbroek/raddish)
+[![Code Climate](https://img.shields.io/codeclimate/github/JaspervRijbroek/raddish.svg?style=flat-square)](https://codeclimate.com/github/JaspervRijbroek/raddish)
+[![Coverage Status](https://img.shields.io/coveralls/JaspervRijbroek/raddish.svg?style=flat-square)](https://coveralls.io/r/JaspervRijbroek/raddish?branch=develop)
 [![Inline docs](http://inch-ci.org/github/JaspervRijbroek/raddish.svg?branch=develop&style=shields)](http://inch-ci.org/github/JaspervRijbroek/raddish)
+[![Author](https://img.shields.io/badge/author-%40jaspervrijbro-brightgreen.svg?style=flat-square)](https://twitter.com/JaspervanRijbro)
 
 What is Raddish Framework
 -------------------------
