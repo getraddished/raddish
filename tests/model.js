@@ -34,7 +34,7 @@ describe('Model Tests', function() {
         });
 
         it('Should return a valid rowset', function(done) {
-            ObjectManager.get('com://home/content.model.article')
+            ObjectManager.get('com://home/menu.model.item')
                 .then(function(model) {
                     return model.getList();
                 })
