@@ -8,7 +8,7 @@ Raddish Framework
 [![Coverage Status](https://img.shields.io/coveralls/JaspervRijbroek/raddish.svg?style=flat-square)](https://coveralls.io/r/JaspervRijbroek/raddish?branch=develop)
 [![Inline docs](http://inch-ci.org/github/JaspervRijbroek/raddish.svg?branch=develop&style=shields)](http://inch-ci.org/github/JaspervRijbroek/raddish)
 [![Author](https://img.shields.io/badge/author-%40jaspervrijbro-brightgreen.svg?style=flat-square)](https://twitter.com/JaspervanRijbro)
-[![Gitter](https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg?style=flat-square)](https://gitter.im/JaspervRijbroek/raddish)
+[![Slack](https://img.shields.io/badge/slack-join%20chat%20%E2%86%92-brightgreen.svg?style=flat-square)](https://raddishteam.slack.com)
 
 What is Raddish Framework
 -------------------------
