@@ -11,15 +11,15 @@ describe('Controller Tests', function() {
                     controller.request.view = request.url.query.view || Inflector.pluralize(controller.getIdentifier().getName());
                     controller.format       = (request.url.query.format || Raddish.getConfig('format'));
 
-                    return [controller, controller.getRequest()];
-                })
-                .spread(function(controller, request) {
-                    var context         = controller.getContext();
-                    context.auth        = {username: 'Demo User', password: 'Demo'};
-                    context.request     = request;
-                    context.data        = {};
-                    
-                    return controller.execute('GET', context);
+                    return controller.getRequest()
+                        .then(function(request) {
+                            var context         = controller.getContext();
+                            context.auth        = {username: 'Demo User', password: 'Demo'};
+                            context.request     = request;
+                            context.data        = {};
+
+                            return controller.execute('GET', context);
+                        });
                 })
                 .then(function(result) {
                     result.should.be.an.Object;
@@ -46,15 +46,15 @@ describe('Controller Tests', function() {
                     controller.request.view = request.url.query.view || Inflector.pluralize(controller.getIdentifier().getName());
                     controller.format       = (request.url.query.format || Raddish.getConfig('format'));
 
-                    return [controller, controller.getRequest()];
-                })
-                .spread(function(controller, request) {
-                    var context         = controller.getContext();
-                    context.auth        = {username: 'Demo User', password: 'Demo'};
-                    context.request     = request;
-                    context.data        = {};
+                    return controller.getRequest()
+                        .then(function(request) {
+                            var context         = controller.getContext();
+                            context.auth        = {username: 'Demo User', password: 'Demo'};
+                            context.request     = request;
+                            context.data        = {};
 
-                    return controller.execute('GET', context);
+                            return controller.execute('GET', context);
+                        });
                 })
                 .then(function(result) {
                     result.should.be.an.Object;
@@ -80,19 +80,19 @@ describe('Controller Tests', function() {
                     controller.request.view = request.url.query.view || Inflector.pluralize(controller.getIdentifier().getName());
                     controller.format       = (request.url.query.format || Raddish.getConfig('format'));
 
-                    return [controller, controller.getRequest()];
-                })
-                .spread(function(controller, request) {
-                    var context         = controller.getContext();
-                    context.auth        = {username: 'Demo User', password: 'Demo'};
-                    context.request     = request;
-                    context.data        = {
-                        fields: {
-                            title: 'Demo_Test'
-                        }
-                    };
+                    return controller.getRequest()
+                        .then(function(request) {
+                            var context         = controller.getContext();
+                            context.auth        = {username: 'Demo User', password: 'Demo'};
+                            context.request     = request;
+                            context.data        = {
+                                fields: {
+                                    title: 'Demo_Test'
+                                }
+                            };
 
-                    return controller.execute('POST', context);
+                            return controller.execute('POST', context);
+                        });
                 })
                 .then(function(result) {
                     result.should.be.an.Object;
@@ -115,19 +115,19 @@ describe('Controller Tests', function() {
                     controller.request.view = request.url.query.view || Inflector.pluralize(controller.getIdentifier().getName());
                     controller.format       = (request.url.query.format || Raddish.getConfig('format'));
 
-                    return [controller, controller.getRequest()];
-                })
-                .spread(function(controller, request) {
-                    var context         = controller.getContext();
-                    context.auth        = {username: 'Demo User', password: 'Demo'};
-                    context.request     = request;
-                    context.data        = {
-                        fields: {
-                            title: 'Demo_Test22'
-                        }
-                    };
+                    return controller.getRequest()
+                        .then(function(request) {
+                            var context         = controller.getContext();
+                            context.auth        = {username: 'Demo User', password: 'Demo'};
+                            context.request     = request;
+                            context.data        = {
+                                fields: {
+                                    title: 'Demo_Test22'
+                                }
+                            };
 
-                    return controller.execute('POST', context);
+                            return controller.execute('POST', context);
+                        });
                 })
                 .then(function(result) {
                     result.should.be.an.Object;
@@ -149,19 +149,19 @@ describe('Controller Tests', function() {
                     controller.request.view = request.url.query.view || Inflector.pluralize(controller.getIdentifier().getName());
                     controller.format       = (request.url.query.format || Raddish.getConfig('format'));
 
-                    return [controller, controller.getRequest()];
-                })
-                .spread(function(controller, request) {
-                    var context         = controller.getContext();
-                    context.auth        = {username: 'Demo User', password: 'Demo'};
-                    context.request     = request;
-                    context.data        = {
-                        fields: {
-                            title: 'Demo_Test22'
-                        }
-                    };
+                    return controller.getRequest()
+                        .then(function(request) {
+                            var context         = controller.getContext();
+                            context.auth        = {username: 'Demo User', password: 'Demo'};
+                            context.request     = request;
+                            context.data        = {
+                                fields: {
+                                    title: 'Demo_Test22'
+                                }
+                            };
 
-                    return controller.execute('DELETE', context);
+                            return controller.execute('DELETE', context);
+                        });
                 })
                 .then(function(result) {
                     result.should.be.an.Object;

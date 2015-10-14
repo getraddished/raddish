@@ -5,7 +5,7 @@
  * @author Jasper van Rijbroek <jasper@jvar.nl>
  * @since 28 March 2014
  */
-Promise                                     = require('bluebird');
+Promise                                     = Promise || require('bluebird');
 RaddishError                                = require('./lib/error/error');
 ObjectManager                               = require('./lib/object/manager');
 ObjectLoader                                = require('./lib/object/loader/loader');

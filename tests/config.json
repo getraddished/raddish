@@ -3,10 +3,17 @@
 		"default": {
 			"host": "127.0.0.1",
 			"user": "root",
-			"password": "",
+			"password": "root",
 			"database": "raddish_demo",
             "prefix": false
-		}
+		},
+	  "mongo": {
+		"host": "127.0.0.1",
+		"user": "",
+		"password": "",
+		"database": "raddish_demo",
+		"type": "mongo"
+	  }
 	},
     "plugins": "/tests/plugins",
 	"format": "json",
