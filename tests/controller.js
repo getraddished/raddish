@@ -22,8 +22,6 @@ describe('Controller Tests', function() {
                         });
                 })
                 .then(function(result) {
-                    console.log('Result received');
-
                     result.should.be.an.Object;
                     result.result.data.rows.should.be.an.Object;
 
@@ -31,12 +29,6 @@ describe('Controller Tests', function() {
                 })
                 .then(function(result) {
                     result.should.be.a.String;
-
-                    done();
-                })
-                .catch(function(error) {
-                    console.log(error);
-                    console.log(error.stack);
 
                     done();
                 });
