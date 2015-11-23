@@ -12,12 +12,14 @@ services:
 before_script:
   - mysql -e 'create database raddish_demo; use raddish_demo; create table if not exists menu_items (menu_item_id bigint(20) not null auto_increment,title varchar(255),component varchar(255),primary key(`menu_item_id`)); create table if not exists bank_accounts (bank_account_id bigint(20) not null auto_increment,amount varchar(255),component varchar(255),primary key(`bank_account_id`));'
 script: "npm run-script test-travis"
-after_script: "npm install coveralls@2.10.0 && cat ./coverage/lcov.info | coveralls"
+after_script: "npm install codeclimate-test-reporter && cat ./coverage/lcov.info | codeclimate-test-reporter"
 addons:
   apt:
     sources:
     - ubuntu-toolchain-r-test
     packages:
     - g++-4.8
+  code_climate:
+    repo_token: 24c91023a1f37daad86ed4f5943a4963ae07f8357513fdb59a48297b7efac83d
 env:
   - CXX=g++-4.8
