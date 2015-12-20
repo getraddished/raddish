@@ -113,6 +113,7 @@ describe('Mongo row tests', function() {
                     return row.getData();
                 })
                 .then(function(data) {
+                    console.log(data);
                     data.id.should.be.an.Integer;
 
                     id = data.id;
