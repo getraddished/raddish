@@ -21,13 +21,16 @@
 
 {{#if methods}}
     <hr/>
-    <div class="row">
-        <div class="col-md-12 method">
-            <h2>Methods</h2>
 
-            {{#methods}}
+    <h2>Methods</h2>
+    <div class="row">
+
+        {{#methods}}
+            <div class="col-md-12 method">
                 {{>method}}
-            {{/methods}}
-        </div>
+
+                <hr />
+            </div>
+        {{/methods}}
     </div>
 {{/if}}
