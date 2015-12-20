@@ -170,7 +170,7 @@ describe('Mongo row tests', function() {
     describe('#delete()', function() {
         // We will set the data manually, when the item is received by the
         it('Should return the object of the deleted item', function(done) {
-            ObjectManager.get('com://home/content.database.row.article' )
+            ObjectManager.get('com://home/content.database.row.article')
                 .then(function(row) {
                     return row.setData({
                         id: id
