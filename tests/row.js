@@ -15,6 +15,7 @@ describe('Mysql row tests', function() {
                     return row.save();
                 })
                 .then(function(row) {
+                    console.log(row);
                     return row.getData();
                 })
                 .then(function(data) {
