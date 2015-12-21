@@ -3,7 +3,7 @@
 		"default": {
 			"host": "127.0.0.1",
 			"user": "root",
-			"password": "",
+			"password": "root",
 			"database": "raddish_demo",
             "prefix": false
 		},
@@ -27,7 +27,7 @@
 		},
 		"cors": {
 			"origin": ["*"],
-			"method": ["get", "post"],
+			"methods": ["get", "post"],
 			"credentials": true,
 			"headers": ["Content-Type"]
 		}
