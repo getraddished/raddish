@@ -15,7 +15,12 @@
 			"type": "mongo"
 		}
 	},
-	"threads": true,
+	"threads": {
+		"maxThreads": 16,
+		"maxThreshold": 50,
+		"minThreshold": 10,
+		"interval": 1
+	},
     "plugins": "/tests/plugins",
 	"format": "json",
     "gzip": true,
