@@ -113,7 +113,6 @@ describe('Mongo row tests', function() {
                     return row.getData();
                 })
                 .then(function(data) {
-                    console.log(data);
                     data.id.should.be.an.Integer;
 
                     id = data.id;
@@ -160,8 +159,10 @@ describe('Mongo row tests', function() {
                     return row.save();
                 })
                 .then(function(row) {
-                    row.getData().title.should.equal('blaat');
-                    row.getData().id.should.equal(id);
+                    var data = row.getData();
+
+                    (data.title === 'blaat').should.be.true;
+                    (data.id === id).should.be.true;
 
                     done();
                 });
