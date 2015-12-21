@@ -1,6 +1,6 @@
-<ul>
+<ul class="nav nav-stacked">
     {{#classes}}
-        <li {% if page.url == '/api/raddish/classes/{{name}}.html' %} class="active" {% endif %}>
+        <li class="nav-item {% if page.url == '/api/raddish/classes/{{name}}.html' %}active{% endif %}">
             <a href="/api/raddish/classes/{{name}}.html">
                 {{displayName}}
             </a>
