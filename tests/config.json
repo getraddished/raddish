@@ -21,6 +21,11 @@
 		"minThreshold": 10,
 		"interval": 1
 	},
+	"router": {
+		"routes": {
+			"/item/:id": "/home/menu/item"
+		}
+	},
     "plugins": "/tests/plugins",
 	"format": "json",
     "gzip": true,
