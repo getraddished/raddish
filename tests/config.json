@@ -24,6 +24,12 @@
 	"router": {
 		"routes": {
 			"/item/:id": "/home/menu/item"
+		},
+		"cors": {
+			"origin": ["*"],
+			"method": ["get", "post"],
+			"credentials": true,
+			"headers": ["Content-Type"]
 		}
 	},
     "plugins": "/tests/plugins",
