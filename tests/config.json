@@ -15,6 +15,7 @@
 			"type": "mongo"
 		}
 	},
+	"threads": true,
     "plugins": "/tests/plugins",
 	"format": "json",
     "gzip": true,
