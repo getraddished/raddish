@@ -42,5 +42,26 @@ describe('Router tests', function() {
 
             router.route(request, response);
         });
+
+        it('Should return a filled response parsable by JSON.parse', function(done) {
+            // This will up our score a lot.
+            // But first I have to check it it is going to work.
+            var request = new MockReq({
+                method: 'GET',
+                url: '/item/1',
+                headers: {
+                    'Accept': 'text/plain'
+                }
+            });
+
+            var response = new MockRes();
+            response.on('finish', function() {
+                if(response._getJSON()) {
+                    done();
+                }
+            });
+
+            router.route(request, response);
+        });
     });
 });

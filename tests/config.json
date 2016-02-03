@@ -15,6 +15,23 @@
 			"type": "mongo"
 		}
 	},
+	"threads": {
+		"maxThreads": 16,
+		"maxThreshold": 50,
+		"minThreshold": 10,
+		"interval": 1
+	},
+	"router": {
+		"routes": {
+			"/item/:id": "/home/menu/item"
+		},
+		"cors": {
+			"origin": ["*"],
+			"methods": ["get", "post"],
+			"credentials": true,
+			"headers": ["Content-Type"]
+		}
+	},
     "plugins": "/tests/plugins",
 	"format": "json",
     "gzip": true,
