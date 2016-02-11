@@ -145,8 +145,6 @@ describe('Controller Tests', function() {
                     request.url.query.view = 'item';
                     request.url.query.id = AddedID;
 
-                    console.log(AddedID);
-
                     controller.request      = request.url.query;
                     controller.request.view = request.url.query.view || Inflector.pluralize(controller.getIdentifier().getName());
                     controller.format       = (request.url.query.format || Raddish.getConfig('format'));
