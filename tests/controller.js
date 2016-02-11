@@ -98,7 +98,7 @@ describe('Controller Tests', function() {
                     result.should.be.an.Object;
                     result.result.data.data.title.should.equal('Demo_Test');
 
-                    AddedID = result.result.data.id;
+                    AddedID = result.result.data.data.id;
                     done();
                 });
         });
@@ -144,6 +144,8 @@ describe('Controller Tests', function() {
                 .then(function(controller) {
                     request.url.query.view = 'item';
                     request.url.query.id = AddedID;
+
+                    console.log(AddedID);
 
                     controller.request      = request.url.query;
                     controller.request.view = request.url.query.view || Inflector.pluralize(controller.getIdentifier().getName());
