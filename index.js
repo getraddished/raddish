@@ -20,6 +20,7 @@ module.exports.Behavior                     = require('./lib/command/behavior/be
 module.exports.Controller                   = require('./lib/controller/default');
 module.exports.Filter                       = require('./lib/filter/filter');
 module.exports.HttpDispatcher               = require('./lib/dispatcher/http');
+module.exports.DispatcherAbstract           = require('./lib/dispatcher/abstract');
 module.exports.Inflector                    = require('./lib/inflector/inflector');
 module.exports.Log                          = Log;
 module.exports.Mixin                        = require('./lib/mixin/mixin');
