@@ -4,10 +4,10 @@
 
 [![Build Status](https://img.shields.io/travis/JaspervRijbroek/raddish.svg?style=flat-square)](https://travis-ci.org/JaspervRijbroek/raddish)
 [![Code Climate](https://img.shields.io/codeclimate/github/JaspervRijbroek/raddish.svg?style=flat-square)](https://codeclimate.com/github/JaspervRijbroek/raddish)
-[![Coverage Status](https://img.shields.io/coveralls/JaspervRijbroek/raddish.svg?style=flat-square)](https://coveralls.io/r/JaspervRijbroek/raddish?branch=develop)
+[![Coverage Status](https://img.shields.io/codeclimate/coverage/github/JaspervRijbroek/raddish.svg?style=flat-square)](https://codeclimate.com/github/JaspervRijbroek/raddish/coverage)
 [![Inline docs](http://inch-ci.org/github/JaspervRijbroek/raddish.svg?branch=develop&style=shields)](http://inch-ci.org/github/JaspervRijbroek/raddish)
 [![Author](https://img.shields.io/badge/author-%40jaspervrijbro-brightgreen.svg?style=flat-square)](https://twitter.com/JaspervanRijbro)
-[![Slack](https://img.shields.io/badge/slack-join%20chat%20%E2%86%92-brightgreen.svg?style=flat-square)](https://raddishteam.slack.com)
+[![Gitter](https://img.shields.io/gitter/room/JaspervRijbroek/raddish.svg?style=flat-square)](https://gitter.im/JaspervRijbroek/raddish?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 ## What is Raddish Framework
 
