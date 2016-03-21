@@ -20,6 +20,6 @@ should          = require('should');
 Request.url     = '/home/menu/items';
 Post.url        = '/home/menu/item?id=1';
 
-request         = new Raddish.Router().parseRequest(Request);
-post            = new Raddish.Router().parseRequest(Post);
+request         = new Raddish.Router().getRoute(Request);
+post            = new Raddish.Router().getRoute(Post);
 response        = Response;

@@ -11,9 +11,9 @@ var MockRes     = require('mock-res');
 request.url = '/home/menu/items';
 
 describe('Router tests', function() {
-    describe('#parseRequest()', function() {
+    describe('#getRoute()', function() {
         it('should return a parsed request', function(done) {
-            var req = router.parseRequest(request);
+            var req = router.getRoute(request);
 
             should(req.url).be.an.instanceOf(Object);
             should(req.url.query).should.be.an.instanceOf(Object);
