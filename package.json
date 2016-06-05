@@ -12,7 +12,7 @@
   "main": "./index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/JaspervRijbroek/raddish.git"
+    "url": "https://github.com/getraddished/raddish.git"
   },
   "scripts": {
     "test": "mocha tests/* -R spec -t 15000",
