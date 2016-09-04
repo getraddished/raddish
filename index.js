@@ -9,3 +9,4 @@ Promise                                     = global.Promise || require('bluebir
 Raddish                                     = require('./lib/raddish/raddish');
 
 module.exports                              = Raddish;
+module.exports.Application                  = require('./lib/application/application');
