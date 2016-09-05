@@ -6,7 +6,7 @@
  * @since 28 March 2014
  */
 Promise                                     = global.Promise || require('bluebird');
-Raddish                                     = require('./lib/raddish/raddish');
 
-module.exports                              = Raddish;
+module.exports                              = require('./lib/raddish/raddish');
 module.exports.Application                  = require('./lib/application/application');
+module.exports.Router                       = require('./lib/router/router')
