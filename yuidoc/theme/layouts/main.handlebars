@@ -1,16 +1,26 @@
 ---
+title: API
 layout: default
-title: Raddish API {{#if name}} - {{{name}}} {{/if}}
-header: {{{name}}}
-ignore_title: true
+title_extra: {{{name}}}
 ---
 
-<div class="row api">
-    <div class="col-md-3 sidebar">
-        {{>sidebar}}
+<div class="layout with-left-sidebar js-layout">
+    <div class="vertical-menu-select" style="display: none;">
+        <select id="vertical-menu-dropdown1">
+            <option value="">Menu</option>
+            {{#classes}}
+                <option value="/api/classes/{{name}}.html">{{name}}</option>
+            {{/classes}}
+        </select>
     </div>
-
-    <article class="col-md-9">
-        {{>layout_content}}
-    </article>
+    <div class="row">
+        <div class="col-md-3 hidden-sm hidden-xs">
+            <div class="js-sidebar-wrapper">
+                {{>sidebar}}
+            </div>
+        </div>
+        <div class="col-md-9">
+            {{>layout_content}}
+        </div>
+    </div>
 </div>
