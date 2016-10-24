@@ -9,6 +9,7 @@ Promise                         = global.Promise || require('bluebird');
 
 module.exports                  = require('./lib/raddish/raddish');
 module.exports.Application      = require('./lib/application/application');
+module.exports.HttpDispatcher   = require('./lib/dispatcher/http');
 module.exports.ObjectManager    = require('./lib/object/manager');
 module.exports.Plugin           = require('./lib/plugin/plugin');
 module.exports.Router           = require('./lib/router/router');

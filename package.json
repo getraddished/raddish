@@ -27,7 +27,8 @@
     "raddish-threads": "*",
     "raddish-db": "*",
     "raddish-loader": "*",
-    "raddish-inflector": "*"
+    "raddish-inflector": "*",
+    "clone": "*"
   },
   "keywords": [
     "RAD",
