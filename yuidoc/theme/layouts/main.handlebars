@@ -5,12 +5,14 @@ header: {{{name}}}
 ignore_title: true
 ---
 
-<div class="row api">
-    <div class="col-md-3 sidebar">
-        {{>sidebar}}
-    </div>
+<div class="layout with-left-sidebar js-layout">
+    <div class="row">
+        <div class="col-md-3 hidden-sm hidden-xs">
+            {{>sidebar}}
+        </div>
 
-    <article class="col-md-9">
-        {{>layout_content}}
-    </article>
+        <div class="col-md-9">
+            {{>layout_content}}
+        </div>
+    </div>
 </div>

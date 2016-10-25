@@ -1,9 +1,15 @@
-<ul class="nav nav-stacked">
-    {{#classes}}
-        <li class="nav-item {% if page.url == '/api/raddish/classes/{{name}}.html' %}active{% endif %}">
-            <a href="/api/raddish/classes/{{name}}.html">
-                {{displayName}}
-            </a>
-        </li>
-    {{/classes}}
-</ul>
+<div class="js-sidebar-wrapper">
+    <div class="sidebar">
+        <nav class="menu-vertical-wrapper">
+            <ul class="menu-vertical js-menu-vertical tendina" data-prepend-to=".js-layout">
+                {{#classes}}
+                <li>
+                    <a href="/api/classes/{{name}}.html">
+                        {{displayName}}
+                    </a>
+                </li>
+                {{/classes}}
+            </ul>
+        </nav>
+    </div>
+</div>

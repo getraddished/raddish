@@ -1,7 +1,7 @@
 {
   "name": "raddish",
   "description": "Another MVC framework.",
-  "version": "2.4.23",
+  "version": "2.4.24",
   "license": "MIT",
   "author": {
     "name": "Jasper van Rijbroek",
@@ -12,7 +12,7 @@
   "main": "./index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/JaspervRijbroek/raddish.git"
+    "url": "https://github.com/getraddished/raddish.git"
   },
   "scripts": {
     "test": "mocha tests/* -R spec -t 15000",
