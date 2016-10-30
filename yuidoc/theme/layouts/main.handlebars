@@ -12,6 +12,15 @@ ignore_title: true
         </div>
 
         <div class="col-md-9">
+            <h2 class="article-title">
+                API
+                {{#if name}}
+                    <small>
+                        - {{{name}}}
+                    </small>
+                {{/if}}
+            </h2>
+
             {{>layout_content}}
         </div>
     </div>
