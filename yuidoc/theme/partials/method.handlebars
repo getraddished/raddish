@@ -12,7 +12,9 @@
         </span>
     </div>
     <div class="list-item-content">
-        {{{methodDescription}}}
+        <p>
+        {{#stripHtml methodDescription}}{{/stripHtml}}
+        </p>
 
         {{#if params}}
         <strong>Parameters</strong>
@@ -29,15 +31,17 @@
                     <tr>
                         <td>{{name}}</td>
                         <td>{{type}}</td>
-                        <td>{{description}}</td>
+                        <td>{{#stripHtml description}}{{/stripHtml}}</td>
                     </tr>
                 {{/params}}
             </tbody>
         </table>
         {{/if}}
 
+        {{#return}}
         <p>
-            <strong>Returns</strong> {{#crossLink type}}{{/crossLink}}: {{description}}
+            <strong>Returns</strong>{{#if type}} {{#crossLink type}}{{/crossLink}}{{/if}}: {{#stripHtml description}}{{/stripHtml}}
         </p>
+        {{/return}}
     </div>
 </div>

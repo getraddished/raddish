@@ -2,7 +2,9 @@
     <p><strong>Extends</strong> {{#crossLink extends}}{{/crossLink}}</p>
 {{/if}}
 
-{{{classDescription}}}
+<p>
+{{#stripHtml classDescription}}{{/stripHtml}}
+</p>
 
 {{#if methods}}
     <div class="category-info">
