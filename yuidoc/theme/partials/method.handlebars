@@ -1,111 +1,43 @@
-<h3 class="title">
-    {{name}}
-    ({{#if params}}<small>{{#params}}{{name}}{{#unless @last}}, {{/unless}}{{/params}}</small>{{/if}})
-</h3>
-
-
-{{#if deprecated}}
-    <span class="flag deprecated"{{#if deprecationMessage}} title="{{deprecationMessage}}"{{/if}}>deprecated</span>
-{{/if}}
-
-{{#if access}}
-    <span class="flag {{access}}">{{access}}</span>
-{{/if}}
-
-{{#if final}}
-    <span class="flag final">final</span>
-{{/if}}
-
-{{#if static}}
-    <span class="flag static">static</span>
-{{/if}}
-
-{{#if chainable}}
-    <span class="flag chainable">chainable</span>
-{{/if}}
-
-{{#if async}}
-    <span class="flag async">async</span>
-{{/if}}
-
-<div class="meta">
-    {{#if overwritten_from}}
-    <p>Inherited from
-        <a href="{{crossLinkRaw overwritten_from/class}}#method_{{overwritten_from/name}}">
-            {{overwritten_from/class}}
-        </a>
-        {{#if foundAt}}
-            but overwritten in
-        {{/if}}
-    {{else}}
-        {{#if extended_from}}
-        <p>Inherited from
-            <a href="{{crossLinkRaw extended_from}}#method_{{name}}">{{extended_from}}</a>:
-        {{else}}
-            {{#providedBy}}
-                <p>Provided by the <a href="../modules/{{.}}.html">{{.}}</a> module.</p>
-            {{/providedBy}}
-        <p>
-            {{#if foundAt}}
-                Defined in
+<div class="list-item">
+    <div class="list-item-header">
+        <h3 class="list-item-title">
+            <a href="https://github.com/JaspervRijbroek/raddish/tree/master/{{{file}}}#L{{{line}}}" target="_blank">
+                {{name}} ({{#if params}}<small>{{#params}}{{name}}{{#unless @last}}, {{/unless}}{{/params}}</small>{{/if}})
+            </a>
+        </h3>
+        <span class="list-item-meta">
+            {{#if access}}
+            <a href="javascript:void(true);">{{access}}</a>
             {{/if}}
-        {{/if}}
-    {{/if}}
-    {{#if foundAt}}
-        <a href="https://github.com/JaspervRijbroek/raddish/tree/master/{{{file}}}#L{{{line}}}" target="_blank">`{{{file}}}:{{{line}}}`</a>
-    {{/if}}
-</p>
-
-
-    {{#if deprecationMessage}}
-        <p>Deprecated: {{deprecationMessage}}</p>
-    {{/if}}
-
-    {{#if since}}
-        <p>Available since {{since}}</p>
-    {{/if}}
-</div>
-
-<p class="description">
-    {{{methodDescription}}}
-</p>
-
-{{#if params}}
-    <h3>Parameters</h3>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Type</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{#params}}
-                <tr>
-                    <td>{{name}}</td>
-                    <td>{{type}}</td>
-                    <td>{{{description}}}</td>
-                </tr>
-            {{/params}}
-        </tbody>
-    </table>
-{{/if}}
-
-{{#return}}
-    <div class="returns">
-        <h4>Returned Value:</h4>
-
-        {{#if description}}
-            {{#if type}}
-                <span class="type">{{#crossLink type}}{{/crossLink}}</span>:
-            {{/if}}
-            {{{description}}}
-        {{else}}
-            {{#if type}}
-                <span class="type">{{#crossLink type}}{{/crossLink}}</span>:
-            {{/if}}
-        {{/if}}
+        </span>
     </div>
-{{/return}}
+    <div class="list-item-content">
+        {{{methodDescription}}}
+
+        {{#if params}}
+        <strong>Parameters</strong>
+        <table class="table table-condensed">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#params}}
+                    <tr>
+                        <td>{{name}}</td>
+                        <td>{{type}}</td>
+                        <td>{{description}}</td>
+                    </tr>
+                {{/params}}
+            </tbody>
+        </table>
+        {{/if}}
+
+        <p>
+            <strong>Returns</strong> {{#crossLink type}}{{/crossLink}}: {{description}}
+        </p>
+    </div>
+</div>

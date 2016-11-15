@@ -12,14 +12,16 @@ ignore_title: true
         </div>
 
         <div class="col-md-9">
-            <h2 class="article-title">
-                API
-                {{#if name}}
-                    <small>
-                        - {{{name}}}
-                    </small>
-                {{/if}}
-            </h2>
+            <a href="https://github.com/JaspervRijbroek/raddish/tree/master/{{{file}}}#L{{{line}}}" target="_blank" style="text-decoration: none;">
+                <h3 class="category-title">
+                    API
+                    {{#if name}}
+                        <small>
+                            - {{{name}}}
+                        </small>
+                    {{/if}}
+                </h3>
+            </a>
 
             {{>layout_content}}
         </div>
