@@ -1,6 +1,6 @@
 # Raddish Framework
 
-[![Raddish Logo](http://getraddish.com/assets/images/logo.svg)](http://getraddish.com)
+[![Raddish Logo](http://getraddish.com/assets/img/logos/logo.svg)](http://getraddish.com)
 
 [![Build Status](https://img.shields.io/travis/JaspervRijbroek/raddish.svg?style=flat-square)](https://travis-ci.org/JaspervRijbroek/raddish)
 [![Code Climate](https://img.shields.io/codeclimate/github/JaspervRijbroek/raddish.svg?style=flat-square)](https://codeclimate.com/github/JaspervRijbroek/raddish)
