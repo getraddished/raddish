@@ -15,7 +15,7 @@ module.exports.Plugin               = require('./lib/plugin/plugin');
 module.exports.Router               = require('./lib/router/router');
 
 module.exports.AbstractController   = require('./lib/controller/abstract');
-module.exports.DefaultController    = require('./lib/controller/abstract');
+module.exports.DefaultController    = require('./lib/controller/default');
 
 module.exports.AbstractModel        = require('./lib/model/abstract');
 module.exports.DefaultModel        = require('./lib/model/default');
