@@ -1,6 +1,8 @@
-{
+module.exports = {
     "env": {
-        "node": true
+        "node": true,
+        "es6": true,
+        "mocha": true
     },
     "extends": "eslint:recommended",
     "rules": {
@@ -8,6 +10,7 @@
         "linebreak-style": ["error", "unix"],
         "quotes": ["error", "single"],
         "semi": ["error", "always"],
+        "no-control-regex": "off",
         "no-cond-assign": ["error", "always"],
         "complexity": ["error", 15],
         "consistent-return": "error",
@@ -21,8 +24,9 @@
         "comma-spacing": ["error", {"before": false, "after": true}],
         "array-bracket-spacing": ["error", "never"],
         "camelcase": ["warn", {"properties": "never"}],
-        "consistent-this": ["error", "that"],
+        "consistent-this": ["error", "self"],
         "one-var": ["error", {"initialized": "always", "uninitialized": "never"}],
-        "no-unneeded-ternary": "error"
+        "no-unneeded-ternary": "error",
+        "no-console": "off"
     }
-}
+};
