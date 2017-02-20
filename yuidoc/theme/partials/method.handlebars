@@ -97,12 +97,11 @@
 
         {{#if description}}
             {{#if type}}
-                <span class="type">{{#crossLink type}}{{/crossLink}}</span>:
+                <p><strong>{{#crossLink type}}{{/crossLink}}</strong>: {{#stripHTML description}}{{/stripHTML}}</p>
             {{/if}}
-            {{{description}}}
         {{else}}
             {{#if type}}
-                <span class="type">{{#crossLink type}}{{/crossLink}}</span>:
+                <span class="type">{{#crossLink type}}{{/crossLink}}</span>
             {{/if}}
         {{/if}}
     </div>
