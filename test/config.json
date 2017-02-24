@@ -1,0 +1,11 @@
+{
+  "database": {
+    "default": {
+      "host": "localhost",
+      "username": "root",
+      "password": "root",
+      "type": "mysql",
+      "database": "raddish_demo"
+    }
+  }
+}
