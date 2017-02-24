@@ -15,8 +15,8 @@
     "url": "https://github.com/getraddished/raddish.git"
   },
   "scripts": {
-    "test": "mocha tests/* -R spec -t 15000",
-    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks -t 15000 tests/"
+    "test": "mocha -t 15000",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks -t 15000"
   },
   "dependencies": {
     "clone": "^2.1.0",
@@ -27,6 +27,11 @@
     "raddish-loader": "*",
     "raddish-threads": "*",
     "socket.io": "^1.7.1"
+  },
+  "devDependencies": {
+    "mocha": "3.2.0",
+    "should": "11.2.0",
+    "istanbul": "0.4.5"
   },
   "keywords": [
     "RAD",
