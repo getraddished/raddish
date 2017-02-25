@@ -14,6 +14,6 @@ addons:
     packages:
     - g++-4.8
   code_climate:
-    repo_token: 24c91023a1f37daad86ed4f5943a4963ae07f8357513fdb59a48297b7efac83d
+    repo_token: d2a8cd304286762ce24ac188ba959f3c2260737990297e906d08f48348bb34d3
 env:
   - CXX=g++-4.8
