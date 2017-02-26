@@ -13,6 +13,8 @@ describe('Dispatcher tests', function() {
                     dispatcher.should.be.an.Object;
                     dispatcher.execute.should.be.a.Function;
                     dispatcher.getController.should.be.a.Function;
+
+                    dispatcher.authenticator.should.equal('basic');
                 });
         });
     });
