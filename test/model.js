@@ -35,11 +35,45 @@ describe('Model Tests', function() {
                    return model.getItem();
                })
                .then(function(item) {
-                   console.log(item.getData());
-
                    item.should.be.an.Object;
                    Object.keys(item.getData()).length.should.equal(0);
                });
+        });
+
+        it('States should not be unique', function() {
+            return model
+                .then(function(model) {
+                    model.state.isUnique().should.be.false;
+                });
+        });
+
+        it('getTable should return a correct table object', function() {
+            return model
+                .then(function(model) {
+                    return model.getTable()
+                })
+                .then(function(table) {
+                    table.getUniqueColumns.should.be.a.Function;
+                    table.getColumns.should.be.a.Function;
+                    table.getName.should.be.a.Function;
+                });
+        });
+
+        it('setState should set the states correctly', function() {
+            return model
+                .then(function(model) {
+                    model
+                        .state
+                        .insert('id', 'int')
+                        .insert('name', 'string');
+
+                    model.setState({
+                        id: 1
+                    }).setState('name', 'Jasper');
+
+                    model.state.states.name.should.be.an.Object;
+                    model.state.states.id.should.be.an.Object;
+                });
         });
     });
 });
