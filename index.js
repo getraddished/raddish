@@ -41,3 +41,4 @@ module.exports.Plugin               = require('./lib/plugin/plugin');
 module.exports.Router               = require('./lib/router/router');
 module.exports.CommandChain         = require('./lib/command/chain');
 module.exports.Socket               = require('./lib/socket/socket');
+module.exports.Filter               = require('./lib/filter/filter');
