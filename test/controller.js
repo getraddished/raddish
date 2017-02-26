@@ -29,9 +29,6 @@ describe('Controller tests', function() {
                     model.state.should.be.a.Function;
                     model.getList.should.be.a.Function;
                     model.getTable.should.be.a.Function;
-                })
-                .catch(function(err) {
-                    console.log(err);
                 });
         });
     });
