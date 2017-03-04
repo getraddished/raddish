@@ -41,4 +41,24 @@ describe('Dispatcher tests', function() {
                 });
         });
     });
+
+    describe('Advanced funtctionality tests', function() {
+        it('Should return a correct username and password from the request', function() {
+            return dispatcher
+                .then(function(dispatcher) {
+                    return dispatcher.getAuthenticator();
+                })
+                .then(function(authenticator) {
+                    return authenticator.authenticate({
+                        headers: {
+                            authorization: 'Basic YWRtaW46YWRtaW4='
+                        }
+                    });
+                })
+                .then(function(user) {
+                    user.username.should.equal('admin');
+                    user.password.should.equal('admin');
+                });
+        });
+    });
 });
