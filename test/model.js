@@ -64,12 +64,22 @@ describe('Model Tests', function() {
                 .then(function(model) {
                     model
                         .state
-                        .insert('id', 'int')
+                        .insert('id', 'int', true)
                         .insert('name', 'string');
 
                     model.setState({
-                        id: 1
+                        id: '1'
                     }).setState('name', 'Jasper');
+
+                    model.state.get('name').should.equal('Jasper');
+                    model.state.get('id').should.equal(1);
+                    model.state.get('unexisting').should.be.false();
+
+                    model.state.isUnique().should.be.true();
+
+                    model.state.insert('test', 'int', true);
+
+                    model.state.isUnique().should.be.false();
 
                     model.state.states.name.should.be.an.Object;
                     model.state.states.id.should.be.an.Object;

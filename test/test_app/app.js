@@ -1,3 +1,5 @@
+'use strict';
+
 var Application = require('../../index').Application;
 
 class TestApplication extends Application {
