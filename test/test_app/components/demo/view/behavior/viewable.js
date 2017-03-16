@@ -1,3 +1,5 @@
+'use strict';
+
 var Behavior = require('../../../../../../index').Behavior;
 
 class Viewable extends Behavior {
