@@ -14,4 +14,30 @@ describe('View tests', function() {
                 });
         });
     });
+
+    describe('Advanced tests', function() {
+        it('Should return correct data', function() {
+            return view
+                .then(function(view) {
+                    return view.execute('render', {
+                        data: {
+                            getData: function() {
+                                return {hello: 'world'}
+                            }
+                        },
+                        model: {
+                            state: {
+                                states: [{
+                                    some: 'states'
+                                }]
+                            }
+                        }
+                    });
+                })
+                .then(function(result) {
+                    result.should.be.a.String;
+                    result.should.equal('{"data":{"hello":"world"},"states":[{"some":"states"}]}');
+                });
+        });
+    });
 });
