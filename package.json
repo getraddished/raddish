@@ -16,7 +16,8 @@
   },
   "scripts": {
     "test": "mocha -t 15000",
-    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks -t 15000"
+    "test-report": "istanbul cover node_modules/mocha/bin/_mocha -- --check-leaks",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --check-leaks"
   },
   "dependencies": {
     "clone": "^2.1.0",
