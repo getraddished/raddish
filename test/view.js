@@ -39,5 +39,16 @@ describe('View tests', function() {
                     result.should.equal('{"data":{"hello":"world"},"states":[{"some":"states"}]}');
                 });
         });
+
+        it('Should return a rendered view when no data is given', function() {
+            return view
+                .then(function(view) {
+                    return view.execute('render', {});
+                })
+                .then(function(result) {
+                    result.should.be.a.String;
+                    result.should.equal('{"data":{},"states":[]}');
+                });
+        });
     });
 });
