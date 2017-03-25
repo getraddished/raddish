@@ -6,6 +6,8 @@ node_js:
   - "6.9"
   - "7.2"
 script: "npm run-script test-travis"
+before_script:
+  - mysql -u root testbase < test/db.sql
 after_script: "npm install codeclimate-test-reporter && cat ./coverage/lcov.info | codeclimate-test-reporter"
 addons:
   apt:
