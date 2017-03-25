@@ -5,7 +5,7 @@
       "username": "root",
       "password": "root",
       "type": "mysql",
-      "database": "raddish_demo"
+      "database": "raddish_test"
     }
   }
 }

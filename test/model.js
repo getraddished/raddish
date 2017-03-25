@@ -1,7 +1,8 @@
 'use strict';
 
 var ObjectManager = require('../index').ObjectManager,
-    model = ObjectManager.get('com://demo/demo.model.demo');
+    model = ObjectManager.get('com://demo/demo.model.demo'),
+    model2 = ObjectManager.get('com://demo/demo.model.test');
 
 require('should');
 
@@ -83,6 +84,49 @@ describe('Model Tests', function() {
 
                     model.state.states.name.should.be.an.Object;
                     model.state.states.id.should.be.an.Object;
+                });
+        });
+    });
+
+    describe('Advanced tests', function() {
+        it('Should have a default state', function() {
+            return model2
+                .then(function(model) {
+                    model.state.states['id'].unique.should.be.true();
+                });
+        });
+
+        it('Should return a new item', function() {
+            return model2
+                .then(function(model) {
+                    return model.getItem()
+                })
+                .then(function(item) {
+                    item._isNew.should.be.true();
+                });
+        });
+
+        it('Should return an existing item', function() {
+            return model2
+                .then(function(model) {
+                    model.setState('id', 1);
+
+                    return model.getItem();
+                })
+                .then(function(item) {
+                    item._isNew.should.be.false();
+                });
+        });
+
+        it('Should return an existing list', function() {
+            return model2
+                .then(function(model) {
+                    model.setState('id', [1]);
+
+                    return model.getList();
+                })
+                .then(function(list) {
+                    console.log(list);
                 });
         });
     });
