@@ -32,6 +32,18 @@ describe('Controller tests', function() {
                 });
         });
 
+        it('Should return a correct model with set state', function() {
+            return controller
+                .then(function(controller) {
+                    return controller.getModel({
+                        test: 2
+                    });
+                })
+                .then(function(model) {
+                    model.state.states['test'].value.should.equal(2);
+                });
+        });
+
         it('Should return a correct view Object', function() {
             return controller
                 .then(function(controller) {
@@ -77,6 +89,45 @@ describe('Controller tests', function() {
     });
 
     describe('Advanced functionality tests', function() {
+        it('Should return a correctly rendered view', function() {
+            var context = {
+                request: {
+                    query: {}
+                },
+                response: {
+                    statusCode: 200,
+                    setHeader: function() {}
+                }
+            };
 
+            return controller
+                .then(function(controller) {
+                    return controller.execute('get', context);
+                })
+                .then(function(result) {
+                    result.should.equal('{"data":[],"states":{"test":{"filter":"int","unique":false,"value":2}}}');
+                });
+        });
+
+        it('Should return statusCode 401 when unauthorized', function() {
+            var context = {
+                request: {
+                    query: {}
+                },
+                response: {
+                    statusCode: 200,
+                    setHeader: function() {}
+                }
+            };
+
+            return controller
+                .then(function(controller) {
+                    return controller.execute('post', context);
+                })
+                .catch(function(err) {
+                    err.message.should.equal('Unauthorized!');
+                    context.response.statusCode.should.equal(401);
+                });
+        });
     });
 });
