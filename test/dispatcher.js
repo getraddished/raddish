@@ -60,5 +60,33 @@ describe('Dispatcher tests', function() {
                     user.password.should.equal('admin');
                 });
         });
+
+        it('Should return the correct data to the response', function() {
+            var context = {
+                request: {
+                    query: {
+                        view: 'tests'
+                    },
+                    data: {},
+                    method: 'GET',
+                    headers: {}
+                },
+                response: {
+                    data: '',
+                    setHeader: function() {},
+                    end: function(data) {
+                        context.response.data = data;
+                    }
+                }
+            };
+
+            return dispatcher
+                .then(function(dispatcher) {
+                    return dispatcher.execute('dispatch', context);
+                })
+                .then(function() {
+                    console.log(context);
+                });
+        });
     });
 });
