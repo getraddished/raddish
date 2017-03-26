@@ -4,3 +4,7 @@ CREATE TABLE `demo_tests` (
   `age` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `demo_tests` (`id`, `username`, `age`)
+VALUES
+  (1, 'jasper', 27);
