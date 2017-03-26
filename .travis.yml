@@ -7,7 +7,8 @@ node_js:
   - "7.2"
 script: "npm run-script test-travis"
 before_script:
-  - mysql -u root < test/db.sql
+  - mysql -u root -e 'CREATE DATABASE raddish_test;'
+  - mysql -u root raddish_test < test/db.sql
 after_script: "npm install codeclimate-test-reporter && cat ./coverage/lcov.info | codeclimate-test-reporter"
 addons:
   apt:

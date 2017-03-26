@@ -1,5 +1,3 @@
-CREATE DATABASE raddish_test;
-
 CREATE TABLE `demo_tests` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(255) DEFAULT NULL,
