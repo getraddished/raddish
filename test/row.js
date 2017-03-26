@@ -3,7 +3,8 @@
 var ObjectManager = require('../index').ObjectManager,
     AbstractTable = require('../index').AbstractTable,
     AbstractRow = require('../index').AbstractRow,
-    row = ObjectManager.get('com://demo/demo.database.row.demo');
+    row = ObjectManager.get('com://demo/demo.database.row.demo'),
+    row2 = ObjectManager.get('com://demo/demo.database.row.test');
 
 require('should');
 
@@ -80,6 +81,42 @@ describe('Row tests', function() {
                 })
                 .then(function(row) {
                     row.should.be.instanceOf(AbstractRow);
+                });
+        });
+    });
+
+    describe('Advanced tests', function() {
+        it('Should correctly save an item', function() {
+            return row2
+                .then(function(row) {
+                    row.setData({
+                        username: 'foo',
+                        age: 21
+                    });
+
+                    return row.save();
+                })
+                .then(function(row) {
+                    row.data.username.should.equal('foo');
+                    row.data.age.should.equal(21);
+                    row.data.id.should.equal(2);
+                });
+        });
+
+        it('Should correctly retrieve and remove an item', function() {
+            return ObjectManager.get('com://demo/demo.model.test')
+                .then(function(model) {
+                    model.setState('id', 2);
+
+                    return model.getItem();
+                })
+                .then(function(item) {
+                    return item.delete();
+                })
+                .then(function(row) {
+                    row.data.username.should.equal('foo');
+                    row.data.age.should.equal(21);
+                    row.data.id.should.equal(2);
                 });
         });
     });
