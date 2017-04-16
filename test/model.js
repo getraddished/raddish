@@ -126,7 +126,8 @@ describe('Model Tests', function() {
                     return model.getList();
                 })
                 .then(function(list) {
-                    console.log(list);
+                    list.rows.should.be.an.Array;
+                    list.rows.length.should.equal(1);
                 });
         });
     });

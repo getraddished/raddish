@@ -85,7 +85,8 @@ describe('Dispatcher tests', function() {
                     return dispatcher.execute('dispatch', context);
                 })
                 .then(function() {
-                    console.log(context);
+                    context.user.should.be.an.Object;
+                    context.method.should.equal('get');
                 });
         });
     });
