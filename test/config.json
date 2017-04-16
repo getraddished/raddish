@@ -3,7 +3,7 @@
     "default": {
       "host": "localhost",
       "username": "root",
-      "password": "root",
+      "password": "",
       "type": "mysql",
       "database": "raddish_test"
     }
