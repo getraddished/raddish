@@ -1,19 +1,16 @@
-Raddish Framework
-=================
+# Raddish Framework
 
-[![Raddish Logo](http://getraddish.com/assets/images/logo.svg)](http://getraddish.com)
+[![Raddish Logo](http://getraddish.com/assets/img/logos/logo.svg)](http://getraddish.com)
 
 [![Build Status](https://img.shields.io/travis/JaspervRijbroek/raddish.svg?style=flat-square)](https://travis-ci.org/JaspervRijbroek/raddish)
 [![Code Climate](https://img.shields.io/codeclimate/github/JaspervRijbroek/raddish.svg?style=flat-square)](https://codeclimate.com/github/JaspervRijbroek/raddish)
-[![Coverage Status](https://img.shields.io/coveralls/JaspervRijbroek/raddish.svg?style=flat-square)](https://coveralls.io/r/JaspervRijbroek/raddish?branch=develop)
+[![Coverage Status](https://img.shields.io/codeclimate/coverage/github/JaspervRijbroek/raddish.svg?style=flat-square)](https://codeclimate.com/github/JaspervRijbroek/raddish/coverage)
 [![Inline docs](http://inch-ci.org/github/JaspervRijbroek/raddish.svg?branch=develop&style=shields)](http://inch-ci.org/github/JaspervRijbroek/raddish)
 [![Author](https://img.shields.io/badge/author-%40jaspervrijbro-brightgreen.svg?style=flat-square)](https://twitter.com/JaspervanRijbro)
-[![Slack](https://img.shields.io/badge/slack-join%20chat%20%E2%86%92-brightgreen.svg?style=flat-square)](https://raddishteam.slack.com)
 
-What is Raddish Framework
--------------------------
+## What is Raddish Framework
 
-Raddish is an open-source NodeJS Framework for web applications for modern web applications. 
+Raddish is an open-source NodeJS Framework for modern web applications. 
 Developed and maintained by passionate developers.
 
 The design pattern based architecure gives more flexibility to your applications.
@@ -22,8 +19,7 @@ Basically everything being written becomes resuable and extensible pieces of cod
 Raddish uses a [component based architecure](http://en.wikipedia.org/wiki/Component-based_software_engineering) seperated by applications,
 working together accoring the [Hierarchical Model-View-Contoller](http://en.wikipedia.org/wiki/Hierarchical_model%E2%80%93view%E2%80%93controller) **(HMVC)** pattern.
 
-Why Raddish Framework
----------------------
+## Why Raddish Framework
 
 Raddish is build to help developers create a fast and reliable backend for web applications,
 Raddish tries to solve this by doing to following
@@ -31,8 +27,7 @@ Raddish tries to solve this by doing to following
 - Provide a solid, modern and lean architecture for building applications
 - Allow components to be flexible, reusable and extendable with ease.
 
-Contributing
-------------
+## Contributing
 
 We love you contributing to Raddish Framework, this can be anything from bug fixes to features and inprovements.
 We do appreciate some guidelines in contributes.

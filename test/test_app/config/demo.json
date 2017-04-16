@@ -1,0 +1,10 @@
+{
+    "view": {
+        "json": {
+            "behaviors": {
+                "com://demo/demo.view.behavior.viewable": null,
+                "viewable": null
+            }
+        }
+    }
+}

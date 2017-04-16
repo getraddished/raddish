@@ -1,20 +1,14 @@
 language: node_js
 sudo: false
 node_js:
-  - "0.10"
-  - "0.12"
-  - "4.0"
-  - "4.1"
-  - "4.2"
-  - "5.0"
-  - "5.1"
-  - "5.2"
-  - "5.3"
-services:
-  - mongodb
-before_script:
-  - mysql -e 'create database raddish_demo; use raddish_demo; create table if not exists menu_items (menu_item_id bigint(20) not null auto_increment,title varchar(255),component varchar(255),primary key(`menu_item_id`)); create table if not exists bank_accounts (bank_account_id bigint(20) not null auto_increment,amount varchar(255),component varchar(255),primary key(`bank_account_id`));'
+  - "4.6"
+  - "5.12"
+  - "6.9"
+  - "7.2"
 script: "npm run-script test-travis"
+before_script:
+  - mysql -u root -e 'CREATE DATABASE raddish_test;'
+  - mysql -u root raddish_test < test/db.sql
 after_script: "npm install codeclimate-test-reporter && cat ./coverage/lcov.info | codeclimate-test-reporter"
 addons:
   apt:
@@ -23,6 +17,6 @@ addons:
     packages:
     - g++-4.8
   code_climate:
-    repo_token: 24c91023a1f37daad86ed4f5943a4963ae07f8357513fdb59a48297b7efac83d
+    repo_token: d2a8cd304286762ce24ac188ba959f3c2260737990297e906d08f48348bb34d3
 env:
   - CXX=g++-4.8

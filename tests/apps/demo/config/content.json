@@ -1,7 +1,0 @@
-{
-    "table": {
-        "article": {
-            "db": "mongo"
-        }
-    }
-}
