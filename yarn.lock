@@ -304,7 +304,7 @@ delegates@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delegates/-/delegates-1.0.0.tgz#84c6e159b81904fdca59a0ef44cd870d31250f9a"
 
-denque@^1.1.0:
+denque@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/denque/-/denque-1.1.1.tgz#10229c2b88eec1bd15ff82c5fde356e7beb6db9e"
 
@@ -822,19 +822,19 @@ mocha@3.2.0:
     mkdirp "0.5.1"
     supports-color "3.1.2"
 
-mongodb-core@2.1.8:
-  version "2.1.8"
-  resolved "https://registry.yarnpkg.com/mongodb-core/-/mongodb-core-2.1.8.tgz#b33e0370d0a59d97b6cb1ec610527be9e95ca2c0"
+mongodb-core@2.1.9:
+  version "2.1.9"
+  resolved "https://registry.yarnpkg.com/mongodb-core/-/mongodb-core-2.1.9.tgz#85aa71ee4fb716196e06b787557bf139f801daf5"
   dependencies:
     bson "~1.0.4"
     require_optional "~1.0.0"
 
-mongodb@2.2.23:
-  version "2.2.23"
-  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-2.2.23.tgz#46195ef824254801550c9af53049420cd66a07c1"
+mongodb@2.2.25:
+  version "2.2.25"
+  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-2.2.25.tgz#d3b25dad00eda2bdfcbc996210ba082ac686a6b6"
   dependencies:
     es6-promise "3.2.1"
-    mongodb-core "2.1.8"
+    mongodb-core "2.1.9"
     readable-stream "2.1.5"
 
 ms@0.7.1:
@@ -845,18 +845,18 @@ ms@0.7.2:
   version "0.7.2"
   resolved "https://registry.yarnpkg.com/ms/-/ms-0.7.2.tgz#ae25cf2512b3885a1d95d7f037868d8431124765"
 
-mysql2@1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/mysql2/-/mysql2-1.1.2.tgz#92518f70df8c008c1e23c9b2bc2230c08f5faa13"
+mysql2@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/mysql2/-/mysql2-1.2.0.tgz#3ac6a419a783a66aac8fd7eab8a71089a2612b79"
   dependencies:
     cardinal "1.0.0"
-    denque "^1.1.0"
+    denque "^1.1.1"
     generate-function "^2.0.0"
     iconv-lite "^0.4.13"
     long "^3.2.0"
     lru-cache "^4.0.1"
     named-placeholders "1.1.1"
-    object-assign "^4.1.0"
+    object-assign "^4.1.1"
     readable-stream "2.2.2"
     safe-buffer "^5.0.1"
     seq-queue "0.0.5"
@@ -920,9 +920,13 @@ oauth-sign@~0.8.1:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.8.2.tgz#46a6ab7f0aead8deae9ec0565780b7d4efeb9d43"
 
-object-assign@4.1.0, object-assign@^4.1.0:
+object-assign@4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.0.tgz#7a3b3d0e98063d43f4c03f2e8ae6cd51a86883a0"
+
+object-assign@^4.1.0, object-assign@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
 
 object-component@0.0.3:
   version "0.0.3"
@@ -1017,27 +1021,27 @@ qs@~6.4.0:
   version "6.4.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.4.0.tgz#13e26d28ad6b0ffaa91312cd3bf708ed351e7233"
 
-raddish-db@*:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/raddish-db/-/raddish-db-0.0.6.tgz#a4d7642813cb88437194e267c695df85f97669ad"
+raddish-db@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/raddish-db/-/raddish-db-1.0.0.tgz#fe64834d6276c59fe203cc65349d37e79d7366d9"
   dependencies:
     generic-pool "3.1.7"
-    mongodb "2.2.23"
-    mysql2 "1.1.2"
+    mongodb "2.2.25"
+    mysql2 "1.2.0"
     sqlite3 "3.1.8"
     tunnel-ssh "4.1.2"
 
-raddish-inflector@*:
+raddish-inflector@*, raddish-inflector@^0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/raddish-inflector/-/raddish-inflector-0.0.1.tgz#a046c2cf4d86e0fe75fd5d92ff1b39a8f25859c3"
 
-raddish-loader@*:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/raddish-loader/-/raddish-loader-0.1.0.tgz#00e7048d9462ddb29eec50920762ae86bc2afd60"
+raddish-loader@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/raddish-loader/-/raddish-loader-1.0.0.tgz#a96d5dee30e8ef3a7bd39b809639f10eb32d5eec"
   dependencies:
     raddish-inflector "*"
 
-raddish-threads@*:
+raddish-threads@^0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/raddish-threads/-/raddish-threads-0.0.2.tgz#a8d32516875574663aab7af245f7841458c15f53"
   dependencies:
@@ -1185,9 +1189,9 @@ should-util@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/should-util/-/should-util-1.0.0.tgz#c98cda374aa6b190df8ba87c9889c2b4db620063"
 
-should@11.2.0:
-  version "11.2.0"
-  resolved "https://registry.yarnpkg.com/should/-/should-11.2.0.tgz#7afca3182c234781d786d2278a87805b5ecf0409"
+should@^11.2.1:
+  version "11.2.1"
+  resolved "https://registry.yarnpkg.com/should/-/should-11.2.1.tgz#90f55145552d01cfc200666e4e818a1c9670eda2"
   dependencies:
     should-equal "^1.0.0"
     should-format "^3.0.2"

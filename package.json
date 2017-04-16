@@ -23,16 +23,16 @@
     "clone": "^2.1.0",
     "formidable": "^1.0.17",
     "mime": "^1.3.4",
-    "raddish-db": "*",
-    "raddish-inflector": "*",
-    "raddish-loader": "*",
-    "raddish-threads": "*",
+    "raddish-db": "^1.0.0",
+    "raddish-inflector": "^0.0.1",
+    "raddish-loader": "^1.0.0",
+    "raddish-threads": "^0.0.2",
     "socket.io": "^1.7.1"
   },
   "devDependencies": {
     "istanbul": "0.4.5",
     "mocha": "3.2.0",
-    "should": "11.2.0"
+    "should": "^11.2.1"
   },
   "keywords": [
     "RAD",
