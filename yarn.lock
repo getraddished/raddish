@@ -121,6 +121,10 @@ better-assert@~1.0.0:
   dependencies:
     callsite "1.0.0"
 
+bindings@1.x.x:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/bindings/-/bindings-1.2.1.tgz#14ad6113812d2d37d72e67b4cacb4bb726505f11"
+
 blob@0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/blob/-/blob-0.0.4.tgz#bcf13052ca54463f30f9fc7e95b9a47630a94921"
@@ -729,7 +733,7 @@ lodash.create@3.1.1:
     lodash._basecreate "^3.0.0"
     lodash._isiterateecall "^3.0.0"
 
-lodash.defaults@^4.0.1, lodash.defaults@^4.1.0:
+lodash.defaults@^4.1.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/lodash.defaults/-/lodash.defaults-4.2.0.tgz#d09178716ffea4dde9e5fb7b37f6f0802274580c"
 
@@ -864,7 +868,7 @@ named-placeholders@1.1.1:
   dependencies:
     lru-cache "2.5.0"
 
-nan@~2.4.0:
+nan@^2.0.9, nan@~2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.4.0.tgz#fb3c59d45fe4effe215f0b890f8adf6eb32d2232"
 
@@ -1036,6 +1040,12 @@ raddish-loader@^1.0.0:
   resolved "https://registry.yarnpkg.com/raddish-loader/-/raddish-loader-1.0.0.tgz#a96d5dee30e8ef3a7bd39b809639f10eb32d5eec"
   dependencies:
     raddish-inflector "*"
+
+raddish-threads@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/raddish-threads/-/raddish-threads-1.0.1.tgz#af99cbf825d63a61771f81ddc61c6719a79d7d2f"
+  dependencies:
+    usage "^0.7.1"
 
 rc@^1.1.7:
   version "1.1.7"
@@ -1365,12 +1375,6 @@ tar@^2.2.1:
     fstream "^1.0.2"
     inherits "2"
 
-throng@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/throng/-/throng-4.0.0.tgz#983c6ba1993b58eae859998aa687ffe88df84c17"
-  dependencies:
-    lodash.defaults "^4.0.1"
-
 to-array@0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/to-array/-/to-array-0.1.4.tgz#17e6c11f73dd4f3d74cda7a4ff3238e9ad9bf890"
@@ -1425,6 +1429,13 @@ uid-number@^0.0.6:
 ultron@1.0.x:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/ultron/-/ultron-1.0.2.tgz#ace116ab557cd197386a4e88f4685378c8b2e4fa"
+
+usage@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/usage/-/usage-0.7.1.tgz#25f3106a519550aba41bf6e7685bc9bd533362ff"
+  dependencies:
+    bindings "1.x.x"
+    nan "^2.0.9"
 
 util-deprecate@~1.0.1:
   version "1.0.2"
