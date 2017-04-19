@@ -1,7 +1,7 @@
 {
   "name": "raddish",
   "description": "Another MVC framework.",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "license": "MIT",
   "author": {
     "name": "Jasper van Rijbroek",
@@ -26,7 +26,7 @@
     "raddish-db": "^1.0.0",
     "raddish-inflector": "^0.0.1",
     "raddish-loader": "^1.0.0",
-    "raddish-threads": "^0.0.2",
+    "raddish-threads": "^1.0.1",
     "socket.io": "^1.7.1"
   },
   "devDependencies": {
