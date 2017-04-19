@@ -1,39 +1,19 @@
-<div class="row">
-    <div class="col-md-12">
-        <div class="page-header">
-            <h1>{{name}}</h1>
-        </div>
+{{#if extends}}
+    <p><strong>Extends</strong> {{#crossLink extends}}{{/crossLink}}</p>
+{{/if}}
 
-        <div class="description">
-            {{{classDescription}}}
-        </div>
-
-        {{#if extends}}
-            <div class="extends">
-                Extends {{#crossLink extends}}{{/crossLink}}
-            </div>
-        {{/if}}
-
-        {{#if foundAt}}
-            <div class="foundat">
-                Defined in: <a href="https://github.com/JaspervRijbroek/raddish/tree/master/{{{file}}}#L{{{line}}}" target="_blank">`{{{file}}}:{{{line}}}`</a>
-            </div>
-        {{/if}}
-    </div>
-</div>
+<p>
+{{#stripHtml classDescription}}{{/stripHtml}}
+</p>
 
 {{#if methods}}
-    <hr/>
+    <div class="category-info">
+        <h3 class="category-title">Methods</h3>
+    </div>
 
-    <h2>Methods</h2>
-    <div class="row">
-
+    <div class="list-view">
         {{#methods}}
-            <div class="col-md-12 method">
-                {{>method}}
-
-                <hr />
-            </div>
+            {{>method}}
         {{/methods}}
     </div>
 {{/if}}

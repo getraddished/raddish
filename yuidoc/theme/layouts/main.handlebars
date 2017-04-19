@@ -1,25 +1,28 @@
 ---
-title: API
 layout: default
-title_extra: {{{name}}}
+title: Raddish API {{#if name}} - {{{name}}} {{/if}}
+header: {{{name}}}
+ignore_title: true
 ---
 
 <div class="layout with-left-sidebar js-layout">
-    <div class="vertical-menu-select" style="display: none;">
-        <select id="vertical-menu-dropdown1">
-            <option value="">Menu</option>
-            {{#classes}}
-                <option value="/api/classes/{{name}}.html">{{name}}</option>
-            {{/classes}}
-        </select>
-    </div>
     <div class="row">
         <div class="col-md-3 hidden-sm hidden-xs">
-            <div class="js-sidebar-wrapper">
-                {{>sidebar}}
-            </div>
+            {{>sidebar}}
         </div>
+
         <div class="col-md-9">
+            <a href="https://github.com/JaspervRijbroek/raddish/tree/master/{{{file}}}#L{{{line}}}" target="_blank" style="text-decoration: none;">
+                <h3 class="category-title">
+                    API
+                    {{#if name}}
+                        <small>
+                            - {{{name}}}
+                        </small>
+                    {{/if}}
+                </h3>
+            </a>
+
             {{>layout_content}}
         </div>
     </div>

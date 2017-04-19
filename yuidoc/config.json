@@ -2,6 +2,6 @@
   "options": {
     "themedir": "yuidoc/theme",
     "outdir": "yuidoc/raddish",
-    "helpers": ["yuidoc/theme/helpers/stripHtml.js"]
+    "helpers": ["yuidoc/helpers/strip.js"]
   }
 }

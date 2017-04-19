@@ -1,13 +1,15 @@
-<div class="sidebar">
-    <nav class="menu-vertical-wrapper">
-        <ul class="menu-vertical js-menu-vertical tendina">
-            {{#classes}}
+<div class="js-sidebar-wrapper">
+    <div class="sidebar">
+        <nav class="menu-vertical-wrapper">
+            <ul class="menu-vertical js-menu-vertical tendina" data-prepend-to=".js-layout">
+                {{#classes}}
                 <li>
                     <a href="/api/classes/{{name}}.html">
                         {{displayName}}
                     </a>
                 </li>
-            {{/classes}}
-        </ul>
-    </nav>
+                {{/classes}}
+            </ul>
+        </nav>
+    </div>
 </div>
