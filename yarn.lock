@@ -135,10 +135,6 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-bluebird@*:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.0.tgz#791420d7f551eea2897453a8a77653f96606d67c"
-
 boom@2.x.x:
   version "2.10.1"
   resolved "https://registry.yarnpkg.com/boom/-/boom-2.10.1.tgz#39c8918ceff5799f83f9492a848f625add0c766f"
@@ -1041,12 +1037,11 @@ raddish-loader@^1.0.0:
   dependencies:
     raddish-inflector "*"
 
-raddish-threads@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/raddish-threads/-/raddish-threads-0.0.2.tgz#a8d32516875574663aab7af245f7841458c15f53"
+raddish-threads@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/raddish-threads/-/raddish-threads-1.0.1.tgz#af99cbf825d63a61771f81ddc61c6719a79d7d2f"
   dependencies:
-    bluebird "*"
-    usage "*"
+    usage "^0.7.1"
 
 rc@^1.1.7:
   version "1.1.7"
@@ -1431,7 +1426,7 @@ ultron@1.0.x:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/ultron/-/ultron-1.0.2.tgz#ace116ab557cd197386a4e88f4685378c8b2e4fa"
 
-usage@*:
+usage@^0.7.1:
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/usage/-/usage-0.7.1.tgz#25f3106a519550aba41bf6e7685bc9bd533362ff"
   dependencies:
