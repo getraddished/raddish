@@ -17,7 +17,9 @@
   "scripts": {
     "test": "mocha -t 15000",
     "test-report": "istanbul cover node_modules/mocha/bin/_mocha -- --check-leaks",
-    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --check-leaks"
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --check-leaks",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "clone": "^2.1.0",
@@ -27,7 +29,8 @@
     "raddish-inflector": "^0.0.1",
     "raddish-loader": "^1.0.0",
     "raddish-threads": "^1.0.1",
-    "socket.io": "^1.7.1"
+    "socket.io": "^2.0.2",
+    "snyk": "^1.36.2"
   },
   "devDependencies": {
     "istanbul": "0.4.5",
@@ -43,5 +46,6 @@
     "fallback",
     "multidatabase",
     "streams"
-  ]
+  ],
+  "snyk": true
 }
